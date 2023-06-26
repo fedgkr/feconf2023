@@ -1,0 +1,73 @@
+.root {
+  --button-width: 840px;
+  --button-height: 420px;
+  --toggle-diameter: 370px;
+  --toggle-wider: calc(var(--toggle-diameter) * 1.3);
+  --border-gap: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+
+  position: absolute;
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: 100vw;
+  will-change: width;
+  background-color: rgba(217, 217, 217, .2);
+  overflow: hidden;
+  -webkit-overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+
+  @media screen and (max-width: 1024px) {
+    --button-width: 620px;
+    --button-height: 310px;
+    --toggle-diameter: 270px;
+  }
+
+  @media screen and (max-width: 728px) {
+    --button-width: 220px;
+    --button-height: 110px;
+    --toggle-diameter: 90px;
+  }
+
+  &:active {
+    .knob {
+      width: var(--toggle-wider);
+    }
+  }
+}
+
+.knob {
+  position: absolute;
+  top: var(--border-gap);
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  border-radius: 100vw;
+  background-color: white;
+  box-shadow: 0 0 6px 2px hsla(0, 0%, 0%, .075), 0 6px 10px hsla(0, 0%, 0%, .15), 2px 4px 4px hsla(0, 0%, 0%, .05);
+  z-index: 1;
+  will-change: transform, width;
+  transform: translateX(var(--border-gap));
+  transition: transform var(--switch-animation), width var(--switch-animation);
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-image: linear-gradient(#00e459, #00e158);
+  transition: opacity .3s 0.2s;
+}
+
+.root.on {
+  .knob {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--border-gap)));
+  }
+
+  .background {
+    opacity: 1;
+  }
+
+  &:active {
+    .knob {
+      transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--border-gap)));
+    }
+  }
+}
