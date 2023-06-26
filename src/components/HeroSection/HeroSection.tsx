@@ -9,10 +9,11 @@ const HeroSection = component$(() => {
     focusMode.value = !focusMode.value;
   });
   return (
-    <section class={[css.root, { [css.on]: focusMode.value }]}>
-      <div class={[css.container, { [css.on]: focusMode.value }]}>
+    <section class={css.root}>
+      <div class={css.container}>
         <div class={css.wrap}>
           <Switch on={focusMode.value} onChangeOn={handleClickSwitch} />
+          <div class={[css.overlay, { [css.on]: focusMode.value }]} />
         </div>
       </div>
     </section>

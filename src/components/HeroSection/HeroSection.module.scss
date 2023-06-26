@@ -1,8 +1,21 @@
 .root {
-  --switch-delay: 0.25s;
   --switch-duration: 0.3s;
+  --position-duration: 0.5s;
   --switch-animation: var(--switch-duration) cubic-bezier(0.455, 0.03, 0.215, 1.33);
-  --position-animation: var(--switch-delay) calc(var(--switch-duration) + var(--switch-delay)) ease-in-out;
+  --position-animation: var(--position-duration) var(--switch-duration) ease-out;
+
+  --button-width: 840px;
+  --button-height: calc(var(--button-width) / 2);
+  --toggle-diameter: calc(var(--button-height) * 0.9);
+  --border-gap: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+
+  @media screen and (max-width: 1024px) {
+    --button-width: 620px;
+  }
+
+  @media screen and (max-width: 728px) {
+    --button-width: 220px;
+  }
 
   position: fixed;
   top: 0;
@@ -33,9 +46,28 @@
 }
 
 .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  aspect-ratio: 1920 / 1080;
+  position: relative;
+  width: var(--button-width);
+  height: var(--button-height);
+}
+
+.overlay {
+  position: absolute;
+  top: var(--border-gap);
+  left: calc(50% + var(--border-gap));
+  width: var(--toggle-diameter);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 100;
+  opacity: 0;
+  transition: width var(--position-animation), opacity 0s var(--switch-duration);
+  will-change: width, opacity, transform;
+  pointer-events: none;
+
+  &.on {
+    opacity: 1;
+    width: calc(max(150vw, 150vh));
+    transform: translate3d(calc((100% - var(--toggle-diameter)) / -2), calc((100% - var(--toggle-diameter)) / -2), 0);
+  }
 }
