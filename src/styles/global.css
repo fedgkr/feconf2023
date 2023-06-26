@@ -1,5 +1,5 @@
 :root {
-  --feconf-black: #000000;
+  --feconf-primary-gradient: radial-gradient(63.6% 63.6% at 52.09% 47.78%, #712FFF 0%, rgba(113, 47, 255, 0) 100%), linear-gradient(0deg, #712FFF, #712FFF);
   --feconf-white: #FFFFFF;
 }
 
