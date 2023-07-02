@@ -13,7 +13,6 @@ const HeroSection = component$(() => {
   const containerRef = useSignal<Element>();
   const containerWidth = useSignal(0);
   const containerHeight = useSignal(0);
-  const scroll = useSignal(0);
   const scrollRatio = useSignal(0);
   const focusMode = useSignal(false);
   const handleClickSwitch = $(() => {
@@ -36,8 +35,7 @@ const HeroSection = component$(() => {
   useOnWindow(
     'scroll',
     $(() => {
-      scroll.value = window.scrollY;
-      if (scroll.value > 50) {
+      if (window.scrollY > 20) {
         focusMode.value = true;
       }
       const start = 100;

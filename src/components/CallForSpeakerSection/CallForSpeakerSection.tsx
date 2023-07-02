@@ -7,12 +7,13 @@ import {
 } from '@builder.io/qwik';
 
 import css from './CallForSpeakerSection.module.scss';
+import { easeOutBounce } from '~/utils/timingFunctions';
 
 const CallForSpeakerSection = component$(() => {
   const containerRef = useSignal<Element>();
   const containerWidth = useSignal(0);
   const containerHeight = useSignal(0);
-  const titleTranslateX = useSignal('100%');
+  const titleMatrix = useSignal('translateX(100%) scale(0.7)');
   useVisibleTask$(() => {
     if (containerRef.value) {
       const rect = containerRef.value.getBoundingClientRect();
@@ -23,22 +24,23 @@ const CallForSpeakerSection = component$(() => {
   useOnWindow(
     'scroll',
     $(() => {
-      const scrollValue = Math.max(window.scrollY - window.innerHeight, 0);
+      const { scrollY, innerHeight } = window;
+      const scrollValue = Math.max(scrollY - innerHeight, 0);
       const duration = window.innerHeight * 3;
-      const progress = Math.min(scrollValue / duration, 1);
-      const start = 100;
-      const distance = 200;
-      const translateX = start - distance * progress;
-      titleTranslateX.value = `${translateX}%`;
+      const progress = easeOutBounce(Math.min(scrollValue / duration, 1));
+      const startScale = 0.5;
+      const scaleAmount = 0.5;
+      const startX = 100;
+      const distanceX = 200;
+      const x = startX - distanceX * progress;
+      const scale = startScale + scaleAmount * progress;
+      titleMatrix.value = `translateX(${x}%) scale(${scale})`;
     })
   );
   return (
     <section ref={containerRef} class={css.root}>
       <div class={css.titleWrap}>
-        <h1
-          class={css.title}
-          style={{ transform: `translateX(${titleTranslateX.value})` }}
-        >
+        <h1 class={css.title} style={{ transform: `${titleMatrix.value}` }}>
           치열한 고민과 도전
         </h1>
       </div>
