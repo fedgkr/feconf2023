@@ -1,0 +1,31 @@
+.root {
+  --background-color: rgba(148, 97, 255, 1);
+
+  position: relative;
+}
+
+.titleWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  width: 200vw;
+  right: 0;
+  font-size: 300px;
+  font-weight: 900;
+  color: white;
+}
+
+.background {
+  width: 150vmax;
+  background-color: var(--background-color);
+}
