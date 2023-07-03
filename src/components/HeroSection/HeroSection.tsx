@@ -20,7 +20,7 @@ const HeroSection = component$(() => {
   const handleClickSwitch = $(() => {
     document.body.style.transition = `background-color 0s var(--main-animation-duration)`;
     document.body.style.backgroundColor = 'white';
-    document.documentElement.scrollTop = 1200;
+    document.documentElement.scrollTop = 1500;
     focusMode.value = true;
   });
   useVisibleTask$(() => {

@@ -50,7 +50,7 @@ const CallForSponsorSection = component$(() => {
     <section ref={containerRef} class={css.root}>
       <div class={css.titleWrap}>
         <h1 class={css.title} style={{ transform: `${titleMatrix.value}` }}>
-          23년을함께 빛낼 후원사
+          23년을 함께 빛낼 후원사
         </h1>
       </div>
       <div class={[css.textWrap, { [css.on]: textMotion.value }]}>

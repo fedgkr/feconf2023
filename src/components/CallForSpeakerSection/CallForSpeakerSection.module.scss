@@ -55,7 +55,8 @@
     font-weight: 700;
     line-height: 72px;
     opacity: 0;
-    transform: translateY(var(--distance));
+    //transform: translateY(var(--distance));
+    transform: scale(1.5);
 
     @include respond-to('medium') {
       font-size: 32px;
@@ -69,7 +70,8 @@
     font-weight: 600;
     line-height: 38px;
     opacity: 0;
-    transform: translateY(var(--distance));
+    //transform: translateY(var(--distance));
+    transform: scale(1.5);
 
     @include respond-to('medium') {
       margin-top: 16px;
@@ -89,7 +91,8 @@
     background-color: rgba(255, 255, 255, 0.3);
     opacity: 0;
     cursor: pointer;
-    transform: scale(1) translateY(var(--distance));
+    //transform: scale(1) translateY(var(--distance));
+    transform: scale(1.5);
 
     @include respond-to('medium') {
       padding: 18px 24px;
@@ -99,14 +102,14 @@
   }
 
   h2, p, button {
-    transition: transform 0s 150ms ease-out, opacity 150ms ease-out;
+    transition: transform 0s 150ms ease-out, opacity 200ms ease-out;
   }
 
   &.on {
     h2, p, button {
       pointer-events: all;
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     };
 
     button {
@@ -117,15 +120,15 @@
     }
 
     h2 {
-      transition: transform 500ms ease-out, opacity 600ms ease-out;
+      transition: transform 200ms ease-out, opacity 600ms ease-out;
     }
 
     p {
-      transition: transform 500ms var(--delay) ease-out, opacity 600ms var(--delay) ease-out;
+      transition: transform 200ms var(--delay) ease-out, opacity 600ms var(--delay) ease-out;
     }
 
     button {
-      transition: transform 500ms calc(var(--delay) * 2) ease-out, opacity 600ms calc(var(--delay) * 2) ease-out;
+      transition: transform 200ms calc(var(--delay) * 2) ease-out, opacity 600ms calc(var(--delay) * 2) ease-out;
     }
   }
 }
