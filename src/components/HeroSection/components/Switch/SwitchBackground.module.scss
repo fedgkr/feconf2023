@@ -1,0 +1,10 @@
+.switchBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.33);
+  pointer-events: none;
+  :global(#myGradient) {
+    transform-origin: 0.5px  0.5px;
+  }
+}

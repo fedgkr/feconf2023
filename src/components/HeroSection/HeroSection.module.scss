@@ -5,8 +5,9 @@
   --switch-duration: 0.3s;
   --position-duration: 0.5s;
   --main-animation-duration: calc(var(--switch-duration) + var(--position-duration));
+  --text-animation-delay: calc(var(--position-duration) - 0.2s);
   --switch-animation: var(--switch-duration) var(--bouncy-ease-out);
-  --position-animation: var(--position-duration) calc(var(--switch-duration)) var(--bouncy-ease-out);
+  --position-animation: var(--position-duration) var(--bouncy-ease-out);
 
   --button-width: 840px;
   --button-height: calc(var(--button-width) / 2);
@@ -25,11 +26,13 @@
 :global {
   body {
     background-color: black;
-    transition: background-color 0s var(--main-animation-duration);
+    // transition: background-color 0s var(--text-animation-delay);
   }
 }
 
 .root {
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   max-width: 100vw;
   display: flex;
@@ -37,6 +40,7 @@
   justify-content: center;
   backdrop-filter: blur(100px);
   overflow: hidden;
+  z-index: 1;
 }
 
 .container {
@@ -61,6 +65,7 @@
 
 .overlay {
   position: absolute;
+  pointer-events: none;
   top: var(--border-gap);
   left: calc(50% + var(--border-gap));
   width: var(--toggle-diameter);
@@ -70,7 +75,7 @@
   pointer-events: none;
   z-index: 1;
   opacity: 0;
-  transition: width var(--position-animation), opacity 0s var(--switch-duration), background-color 0s var(--main-animation-duration);
+  transition: width var(--position-animation), opacity var(--switch-duration);
   will-change: width, opacity, transform;
 }
 
@@ -88,7 +93,7 @@
   color: rgba(30, 34, 49, 1);
   opacity: 0;
   transform: scale(1.5);
-  transition: opacity var(--animation-duration) var(--main-animation-duration) var(--text-animation-ease), transform var(--animation-duration) var(--main-animation-duration) var(--text-animation-ease);
+  transition: opacity var(--animation-duration) var(--text-animation-delay) var(--text-animation-ease), transform var(--animation-duration) var(--text-animation-delay) var(--text-animation-ease);
 
   h2 {
     font-size: 90px;
@@ -131,10 +136,11 @@
 }
 
 .root.on {
+  z-index: 0;
   .overlay {
     opacity: 1;
     width: calc(150vmax + var(--toggle-diameter));
-    background-color: transparent;
+    // background-color: transparent;
     transform: translate3d(calc((100% - var(--toggle-diameter)) / -2), calc((100% - var(--toggle-diameter)) / -2), 0);
   }
 }

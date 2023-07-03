@@ -40,5 +40,10 @@
     "vite": "4.3.9",
     "vite-tsconfig-paths": "4.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "gesto": "^1.19.1",
+    "lodash": "^4.17.21",
+    "scenejs": "^1.10.3"
+  }
 }

@@ -14,9 +14,14 @@ const HeroSection = component$(() => {
   const containerWidth = useSignal(0);
   const containerHeight = useSignal(0);
   const scaleMotion = useSignal(0);
+  const scroll = useSignal(0);
+  const scrollRatio = useSignal(0);
+  const scrollFocusMode = useSignal(false);
   const focusMode = useSignal(false);
   const handleClickSwitch = $(() => {
-    focusMode.value = !focusMode.value;
+    document.body.style.transition = `background-color 0s var(--main-animation-duration)`;
+    document.body.style.backgroundColor = 'white';
+    focusMode.value = true;
   });
   useVisibleTask$(() => {
     history.scrollRestoration = 'manual';
@@ -26,19 +31,21 @@ const HeroSection = component$(() => {
       containerHeight.value = Math.round(rect.height);
     }
   });
-  useVisibleTask$(({ track }) => {
-    const focused = track(() => focusMode.value);
-    if (focused) {
-      document.body.style.backgroundColor = 'white';
-    }
-  });
+  // useVisibleTask$(({ track }) => {
+  //   const focused = track(() => focusMode.value);
+
+  //   if (focused) {
+  //   }
+  // });
   useOnWindow(
     'scroll',
     $(() => {
-      if (window.scrollY > 20) {
-        focusMode.value = true;
+      scroll.value = window.scrollY;
+      
+      if (scroll.value > 50) {
+        scrollFocusMode.value = true;
       }
-      const start = 100;
+      const start = 300;
       const value = Math.max(window.scrollY - start, 0);
       scaleMotion.value = Math.min(value / containerHeight.value, 1.5);
     })
@@ -51,7 +58,7 @@ const HeroSection = component$(() => {
       >
         <div class={css.container}>
           <div class={css.wrap}>
-            <Switch on={focusMode.value} onChangeOn={handleClickSwitch} />
+            <Switch on={focusMode.value} scroll={scrollFocusMode.value} onChangeOn={handleClickSwitch} />
             <div class={css.overlay} />
           </div>
         </div>

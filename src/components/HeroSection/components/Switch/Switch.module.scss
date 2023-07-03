@@ -1,35 +1,49 @@
 .root {
-  --toggle-wider: calc(var(--toggle-diameter) * 1.05);
+  --toggle-wider: calc(var(--toggle-diameter) * 1.3);
   --toggle-wider2: calc(var(--toggle-diameter) * 1.2);
-
-  position: absolute;
+  --switch-init-animation: 1s;
   width: var(--button-width);
   height: var(--button-height);
   border-radius: 100vw;
   opacity: 1;
   will-change: width, opacity;
-  background-color: #111;
   overflow: hidden;
-  -webkit-overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
   transition: opacity 0s var(--main-animation-duration);
+}
+.scrollArea {
+  position: relative;
+  width: calc(100% - var(--border-gap) * 2);
+  height: calc(100% - var(--border-gap) * 2);
+  margin: var(--border-gap);
+  box-sizing: border-box;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  overflow: hidden;
+}
+.offsetArea {
+  container: sidebar / inline-size;
+  position: relative;
+  width: calc(100% - var(--toggle-diameter));
+  height: calc(100%);
+}
 
-  &:hover {
-    .knob {
-      width: var(--toggle-wider);
-    }
-  }
+.guide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(40px);
+  opacity: 0;
 
-  &:active {
-    .knob {
-      width: var(--toggle-wider2);
+  .init & {
+    opacity: 1;
+
+    .guidePath1, .guidePath2 {
+      animation: guide-path-keyframe 1.5s ease-in-out infinite;
     }
   }
 }
 
 .knob {
   position: absolute;
-  top: var(--border-gap);
   width: var(--toggle-diameter);
   height: var(--toggle-diameter);
   border-radius: 100vw;
@@ -37,25 +51,23 @@
   box-shadow: 0 0 6px 2px hsla(0, 0%, 0%, .075), 0 6px 10px hsla(0, 0%, 0%, .15), 2px 4px 4px hsla(0, 0%, 0%, .05);
   z-index: 1;
   will-change: transform, width;
-  transform: translateX(var(--border-gap));
-  transition: transform var(--switch-animation), width var(--switch-animation);
-}
-
-.background {
-  width: 100%;
-  height: 100%;
   opacity: 0;
-  background-image: var(--feconf-primary-gradient);
-  transition: opacity var(--switch-duration) ease-out;
+  transition: width var(--switch-animation), opacity var(--switch-init-animation);
+
+  .init & {
+    opacity: 1;
+  }
+  &:hover {
+    width: var(--toggle-wider);
+  }
+  &:active {
+    width: var(--toggle-diameter);
+  }
 }
 
 .root.on {
   pointer-events: none;
   opacity: 0;
-
-  .knob {
-    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--border-gap)));
-  }
 
   .background {
     opacity: 1;
@@ -65,5 +77,19 @@
     .knob {
       width: var(--toggle-diameter);
     }
+  }
+}
+
+@keyframes guide-path-keyframe {
+  0% {
+    opacity: 0;
+    transform: translate(0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10px);
   }
 }
