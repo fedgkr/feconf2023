@@ -7,7 +7,6 @@ import {
 } from '@builder.io/qwik';
 
 import css from './CallForSpeakerSection.module.scss';
-import { easeOutBounce } from '~/utils/timingFunctions';
 
 const CallForSpeakerSection = component$(() => {
   const containerRef = useSignal<Element>();
@@ -30,7 +29,7 @@ const CallForSpeakerSection = component$(() => {
       const scrollValue = Math.max(scrollY - innerHeight, 0);
       const progress = scrollValue / innerHeight;
       // Title Progress
-      const titleProgress = easeOutBounce(Math.min(progress / 2, 1));
+      const titleProgress = Math.min(progress / 2, 1);
       const startScale = 0.5;
       const scaleAmount = 0.5;
       const startX = 100;
