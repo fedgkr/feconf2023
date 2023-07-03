@@ -1,6 +1,5 @@
 :root {
   --feconf-primary-gradient: radial-gradient(63.6% 63.6% at 52.09% 47.78%, #712FFF 0%, rgba(113, 47, 255, 0) 100%), linear-gradient(0deg, #712FFF, #712FFF);
-  --feconf-white: #FFFFFF;
 }
 
 html {
@@ -9,9 +8,8 @@ html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont,
+  'Apple SD Gothic Neo', sans-serif;
 }
 
 body {
@@ -30,4 +28,15 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
 }

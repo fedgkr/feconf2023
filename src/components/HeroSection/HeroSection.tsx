@@ -13,7 +13,7 @@ const HeroSection = component$(() => {
   const containerRef = useSignal<Element>();
   const containerWidth = useSignal(0);
   const containerHeight = useSignal(0);
-  const scrollRatio = useSignal(0);
+  const scaleMotion = useSignal(0);
   const focusMode = useSignal(false);
   const handleClickSwitch = $(() => {
     focusMode.value = !focusMode.value;
@@ -40,7 +40,7 @@ const HeroSection = component$(() => {
       }
       const start = 100;
       const value = Math.max(window.scrollY - start, 0);
-      scrollRatio.value = Math.min(value / containerHeight.value, 1.5);
+      scaleMotion.value = Math.min(value / containerHeight.value, 1.5);
     })
   );
   return (
@@ -66,7 +66,9 @@ const HeroSection = component$(() => {
       </div>
       <div
         class={css.background}
-        style={{ transform: `scale(${scrollRatio.value})` }}
+        style={{
+          transform: `translate(-50%, -50%) scale(${scaleMotion.value})`,
+        }}
       />
     </>
   );

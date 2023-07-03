@@ -14,6 +14,8 @@ const CallForSpeakerSection = component$(() => {
   const containerWidth = useSignal(0);
   const containerHeight = useSignal(0);
   const titleMatrix = useSignal('translateX(100%) scale(0.7)');
+  const textMotion = useSignal(false);
+  const scaleMotion = useSignal(0);
   useVisibleTask$(() => {
     if (containerRef.value) {
       const rect = containerRef.value.getBoundingClientRect();
@@ -26,15 +28,21 @@ const CallForSpeakerSection = component$(() => {
     $(() => {
       const { scrollY, innerHeight } = window;
       const scrollValue = Math.max(scrollY - innerHeight, 0);
-      const duration = window.innerHeight * 3;
-      const progress = easeOutBounce(Math.min(scrollValue / duration, 1));
+      const progress = scrollValue / innerHeight;
+      // Title Progress
+      const titleProgress = easeOutBounce(Math.min(progress / 2, 1));
       const startScale = 0.5;
       const scaleAmount = 0.5;
       const startX = 100;
       const distanceX = 200;
-      const x = startX - distanceX * progress;
-      const scale = startScale + scaleAmount * progress;
+      const x = startX - distanceX * titleProgress;
+      const scale = startScale + scaleAmount * titleProgress;
       titleMatrix.value = `translateX(${x}%) scale(${scale})`;
+      // TextProgress
+      const textProgress = Math.min((progress - 2) / 2, 1);
+      textMotion.value = textProgress >= 0 && textProgress <= 1;
+      // scaleMotion Progress
+      scaleMotion.value = Math.max(Math.min(progress - 3, 1.5), 0);
     })
   );
   return (
@@ -44,7 +52,25 @@ const CallForSpeakerSection = component$(() => {
           치열한 고민과 도전
         </h1>
       </div>
-      <div class={css.background}></div>
+      <div class={[css.textWrap, { [css.on]: textMotion.value }]}>
+        <h2>
+          <span>당신 몰입한 순간,</span>
+          <br />
+          <span>잠재력을 발휘한 경험</span>
+        </h2>
+        <p>
+          <span>프론트엔드 엔지니어의 흥미로운 도전과</span>
+          <br />
+          <span>개발에 몰입한 경험을 들려주세요.</span>
+        </p>
+        <button>스피커 신청하기</button>
+      </div>
+      <div
+        class={css.background}
+        style={{
+          transform: `translate(-50%, -50%) scale(${scaleMotion.value})`,
+        }}
+      />
     </section>
   );
 });

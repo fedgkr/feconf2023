@@ -16,9 +16,7 @@ function cubicBezier(p1x: number, p1y: number, p2x: number, p2y: number) {
   };
 
   return function (t: number) {
-    return (
-      calculateBezier(t, 0, p1x, p2x, 1) + calculateBezier(t, 0, p1y, p2y, 1)
-    );
+    return calculateBezier(t, 0, p1x, p2x, 1);
   };
 }
 
