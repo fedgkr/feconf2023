@@ -7,6 +7,8 @@ import {
 } from '@builder.io/qwik';
 
 import css from './CallForSponsorSection.module.scss';
+import { CALL_FOR_SPONSOR_LINK, EVENT_DATE_STR } from '~/constants';
+import { SafeLink } from '~/components';
 
 const CallForSponsorSection = component$(() => {
   const containerRef = useSignal<Element>();
@@ -39,9 +41,9 @@ const CallForSponsorSection = component$(() => {
       titleMatrix.value = `translateX(${x}%) scale(${scale})`;
       // TextProgress
       const textProgress = progress - 2;
-      textMotion.value = textProgress >= 0 && textProgress <= 1;
+      textMotion.value = textProgress >= 0 && textProgress <= 1.5;
       const footerProgress = progress - 3.5;
-      footerMotion.value = footerProgress >= 0;
+      footerMotion.value = footerProgress > 0;
     })
   );
   return (
@@ -62,11 +64,13 @@ const CallForSponsorSection = component$(() => {
           <br />
           <span>기업 홍보와 채용 활동을 계획하세요.</span>
         </p>
-        <button>파트너 신청하기</button>
+        <SafeLink href={CALL_FOR_SPONSOR_LINK}>
+          <button>파트너 신청하기</button>
+        </SafeLink>
       </div>
       <div class={[css.footer, { [css.on]: footerMotion.value }]}>
         <img src="/images/feconf.png" alt="FEConf2023" />
-        <p>10월 12일, 잠실 롯데타워에서 만나요!</p>
+        <p>{EVENT_DATE_STR}, 잠실 롯데타워에서 만나요!</p>
       </div>
     </section>
   );

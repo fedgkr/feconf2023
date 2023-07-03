@@ -7,6 +7,8 @@ import {
 } from '@builder.io/qwik';
 
 import css from './CallForSpeakerSection.module.scss';
+import { SafeLink } from '~/components';
+import { CALL_FOR_SHARE_LINK } from '~/constants';
 
 const CallForSpeakerSection = component$(() => {
   const containerRef = useSignal<Element>();
@@ -62,7 +64,9 @@ const CallForSpeakerSection = component$(() => {
           <br />
           <span>개발에 몰입한 경험을 들려주세요.</span>
         </p>
-        <button>스피커 신청하기</button>
+        <SafeLink href={CALL_FOR_SHARE_LINK}>
+          <button>스피커 신청하기</button>
+        </SafeLink>
       </div>
       <div
         class={css.background}
