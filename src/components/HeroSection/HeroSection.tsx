@@ -20,6 +20,7 @@ const HeroSection = component$(() => {
   const handleClickSwitch = $(() => {
     document.body.style.transition = `background-color 0s var(--main-animation-duration)`;
     document.body.style.backgroundColor = 'white';
+    document.documentElement.scrollTop = 1200;
     focusMode.value = true;
   });
   useVisibleTask$(() => {
@@ -38,7 +39,7 @@ const HeroSection = component$(() => {
       if (scroll.value > 50) {
         scrollFocusMode.value = true;
       }
-      const start = 300;
+      const start = 2000;
       const value = Math.max(window.scrollY - start, 0);
       scaleMotion.value = Math.min(value / containerHeight.value, 1.5);
     })

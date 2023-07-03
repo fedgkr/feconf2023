@@ -28,7 +28,7 @@ const CallForSpeakerSection = component$(() => {
     'scroll',
     $(() => {
       const { scrollY, innerHeight } = window;
-      const scrollValue = Math.max(scrollY - innerHeight, 0);
+      const scrollValue = Math.max(scrollY - innerHeight - 1500, 0);
       const progress = scrollValue / innerHeight;
       // Title Progress
       const titleProgress = Math.min(progress / 2, 1);
