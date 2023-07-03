@@ -1,5 +1,5 @@
 .root {
-  --toggle-wider: calc(var(--toggle-diameter) * 1.3);
+  --toggle-wider: calc(var(--toggle-diameter) * 1.05);
   --toggle-wider2: calc(var(--toggle-diameter) * 1.2);
   --switch-init-animation: 1s;
   width: var(--button-width);
@@ -61,7 +61,7 @@
     width: var(--toggle-wider);
   }
   &:active {
-    width: var(--toggle-diameter);
+    width: var(--toggle-wider2);
   }
 }
 
