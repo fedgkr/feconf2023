@@ -1,10 +1,15 @@
 .switchBackground {
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: scale(1.33);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%) scale(1.32);
   pointer-events: none;
   :global(#myGradient) {
     transform-origin: 0.5px  0.5px;
   }
+}
+
+.blurWrapper {
+  transform-origin: 400px 400px;
 }

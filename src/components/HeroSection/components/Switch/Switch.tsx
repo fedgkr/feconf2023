@@ -46,10 +46,10 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
         },
         [`.${css.knob}`]: {
           0: {
-            transform: "translate(0cqw)",
+            transform: "translate(0px)",
           },
           0.2: {
-            transform: "translate(100cqw)",
+            transform: "translate(100px)",
           },
         },
       }, {
@@ -58,8 +58,6 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
         fillMode: "both",
       });
       const el = knobSignal.value!;
-
-      console.log(el);
       const gesto = new Gesto(el, {
         container: window,
         preventClickEventOnDrag: true,
@@ -67,9 +65,13 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
 
       gesto.on("dragStart", e => {
         scene.setDirection("normal");
+        const cqw = el.parentElement!.offsetWidth;
+
+        scene.getItem(`.${css.knob}`).set(0.2, "transform", "translate", `${cqw}px`);
 
         e.data.startPer = scene.getTime() * 100;
-        e.data.cqw = el.parentElement!.offsetWidth;
+        e.data.cqw = cqw;
+        
       });
       gesto.on("drag", e => {
         const per = e.data.startPer + e.distX / e.data.cqw * 100;
@@ -83,7 +85,7 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
           return;
         }
         if (per >= 100) {
-          onChangeOn()
+          // onChangeOn()
         } else if (per > 50 || e.isClick) {
           scene.play();
           scene.once("ended", () => {

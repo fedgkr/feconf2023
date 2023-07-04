@@ -7,9 +7,9 @@
   border-radius: 100vw;
   opacity: 1;
   will-change: width, opacity;
-  overflow: hidden;
   transition: opacity 0s var(--main-animation-duration);
 }
+
 .scrollArea {
   position: relative;
   width: calc(100% - var(--border-gap) * 2);
@@ -18,7 +18,9 @@
   box-sizing: border-box;
   border-radius: calc(var(--toggle-diameter) / 2);
   overflow: hidden;
+  will-change: transform;
 }
+
 .offsetArea {
   container: sidebar / inline-size;
   position: relative;
@@ -50,7 +52,7 @@
   background-color: white;
   box-shadow: 0 0 6px 2px hsla(0, 0%, 0%, .075), 0 6px 10px hsla(0, 0%, 0%, .15), 2px 4px 4px hsla(0, 0%, 0%, .05);
   z-index: 1;
-  will-change: transform, width;
+  will-change: transform, width, opacity;
   opacity: 0;
   transition: width var(--switch-animation), opacity var(--switch-init-animation);
 
