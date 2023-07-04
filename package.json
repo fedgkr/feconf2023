@@ -5,13 +5,14 @@
     "node": ">=15.0.0"
   },
   "private": true,
+  "homepage": "https://2023.feconf.kr",
+  "license": "MIT",
   "scripts": {
     "build": "qwik build -c adapters/static/vite.config.ts",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/static/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
@@ -19,7 +20,11 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "push": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "domain": "echo '2023.feconf.kr' >> dist/CNAME",
+    "export": "yarn build && touch dist/.nojekyll && yarn domain",
+    "deploy": "yarn export && yarn push"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.1.5",
@@ -34,6 +39,7 @@
     "postcss": "^8.4.23",
     "postcss-preset-env": "^8.4.1",
     "prettier": "^2.8.8",
+    "push-dir": "^0.4.1",
     "sass": "^1.63.4",
     "typescript": "5.0.4",
     "undici": "5.22.1",
