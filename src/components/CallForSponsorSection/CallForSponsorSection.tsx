@@ -28,10 +28,10 @@ const CallForSponsorSection = component$(() => {
     'scroll',
     $(() => {
       const { scrollY, innerHeight } = window;
-      const scrollValue = Math.max(scrollY - innerHeight * 6 - 1500, 0);
+      const scrollValue = Math.max(scrollY - innerHeight * 7 - 1500, 0);
       const progress = scrollValue / innerHeight;
       // Title Progress
-      const titleProgress = Math.min(progress / 2, 1);
+      const titleProgress = Math.min(progress / 3, 1);
       const startScale = 0.5;
       const scaleAmount = 0.5;
       const startX = 100;
@@ -40,9 +40,9 @@ const CallForSponsorSection = component$(() => {
       const scale = startScale + scaleAmount * titleProgress;
       titleMatrix.value = `translateX(${x}%) scale(${scale})`;
       // TextProgress
-      const textProgress = progress - 2;
+      const textProgress = progress - 3;
       textMotion.value = textProgress >= 0 && textProgress <= 2.5;
-      const footerProgress = progress - 4.5;
+      const footerProgress = progress - 5.5;
       footerMotion.value = footerProgress > 0;
     })
   );

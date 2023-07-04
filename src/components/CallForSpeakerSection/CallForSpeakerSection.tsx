@@ -31,7 +31,7 @@ const CallForSpeakerSection = component$(() => {
       const scrollValue = Math.max(scrollY - innerHeight - 1500, 0);
       const progress = scrollValue / innerHeight;
       // Title Progress
-      const titleProgress = Math.min(progress / 2, 1);
+      const titleProgress = Math.min(progress / 3, 1);
       const startScale = 0.5;
       const scaleAmount = 0.5;
       const startX = 100;
@@ -39,11 +39,11 @@ const CallForSpeakerSection = component$(() => {
       const x = startX - distanceX * titleProgress;
       const scale = startScale + scaleAmount * titleProgress;
       titleMatrix.value = `translateX(${x}%) scale(${scale})`;
-      const textProgress = progress - 2;
+      const textProgress = progress - 3;
       // TextProgress
       textMotion.value = textProgress >= 0 && textProgress <= 2.5;
       // scaleMotion Progress
-      scaleMotion.value = Math.max(Math.min(progress - 4.5, 1.5), 0);
+      scaleMotion.value = Math.max(Math.min(progress - 5.5, 1.5), 0);
     })
   );
   return (
