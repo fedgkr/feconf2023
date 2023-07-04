@@ -5,7 +5,7 @@ import css from './Header.module.scss';
 const Header = component$(() => {
   return (
     <header class={css.root}>
-      <a class={css.logo} href="/">
+      <a class={css.logo} href="/" aria-label="Link to the home">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"

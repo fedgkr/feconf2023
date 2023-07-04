@@ -11,6 +11,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-RVV7YMBQEY');`;
+1;
 
 export const RouterHead = component$(() => {
   return (
@@ -21,7 +22,7 @@ export const RouterHead = component$(() => {
       <meta property="description" content={description} />
       <meta
         name="viewport"
-        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
+        content="width=device-width,initial-scale=1.0,maximum-scale=5.0"
       />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta
@@ -29,6 +30,9 @@ export const RouterHead = component$(() => {
         content="프론트엔드,프론트엔드개발자,프론트엔드개발자그룹,개발자,프로그래머,마크업,디자이너,컨퍼런스,이벤트,서울,FrontEnd,Developer,Programmer,Markup,Designer,Conference,Event,Seoul"
       />
       <link rel="icon" type="image/png" href={`${host}/images/favicon.png`} />
+
+      {/* For the performance */}
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
 
       {/* Open Graph Meta */}
       <meta property="og:title" content={title} />

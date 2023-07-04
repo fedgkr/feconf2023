@@ -69,7 +69,12 @@ const CallForSponsorSection = component$(() => {
         </SafeLink>
       </div>
       <div class={[css.footer, { [css.on]: footerMotion.value }]}>
-        <img src="/images/feconf.png" alt="FEConf2023" />
+        <img
+          src="/images/feconf.png"
+          alt="FEConf2023"
+          width={1200}
+          height={392}
+        />
         <p>{EVENT_DATE_STR}, 잠실 롯데타워에서 만나요!</p>
       </div>
     </section>
