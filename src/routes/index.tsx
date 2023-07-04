@@ -1,6 +1,16 @@
 import { component$ } from '@builder.io/qwik';
-import { HeroSection } from '~/components';
+import {
+  HeroSection,
+  CallForSponsorSection,
+  CallForSpeakerSection,
+} from '~/components';
 
 export default component$(() => {
-  return <HeroSection />;
+  return (
+    <>
+      <HeroSection />
+      <CallForSpeakerSection />
+      <CallForSponsorSection />
+    </>
+  );
 });
