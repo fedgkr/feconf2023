@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%) scale(1.32);
+  transform: translate(-50%, -50%) scale(1.31);
   pointer-events: none;
   :global(#myGradient) {
     transform-origin: 0.5px  0.5px;
@@ -11,5 +11,6 @@
 }
 
 .blurWrapper {
+  will-change: transform;
   transform-origin: 400px 400px;
 }

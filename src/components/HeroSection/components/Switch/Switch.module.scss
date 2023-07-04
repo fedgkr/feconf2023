@@ -32,6 +32,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  will-change: transform;
   transform: translate(-50%, -50%) translateX(40px);
   opacity: 0;
 
@@ -49,7 +50,7 @@
   width: var(--toggle-diameter);
   height: var(--toggle-diameter);
   border-radius: 100vw;
-  background-color: white;
+  background-color: #938da0;
   box-shadow: 0 0 6px 2px hsla(0, 0%, 0%, .075), 0 6px 10px hsla(0, 0%, 0%, .15), 2px 4px 4px hsla(0, 0%, 0%, .05);
   z-index: 1;
   will-change: transform, width, opacity;

@@ -37,37 +37,22 @@ const SwitchBackground = component$<Props>(({ on }) => {
     return (<>
         <svg viewBox="0 0 800 800" class={css.switchBackground}>
             <mask id="back-mask">
-                <rect class="mask" x="80" y="240" width="640" height="320" rx="160" stroke="white" stroke-width="20" />
+                <rect class="mask" x="0" y="160" width="800" height="480" rx="240" stroke="white" stroke-width="160" />
             </mask>
-            <g mask="url(#back-mask)">
+            <mask id="front-mask">
+                <rect class="mask" x="80" y="240" width="640" height="320" rx="160" stroke="white" stroke-width="10" />
+            </mask>
+            {/* <g mask="url(#back-mask)">
                 <g class={css.blurWrapper}>
-                    {/* <image class={css.blurImage} href="/images/preview/blur.png" x="0" y="0" width="800" height="800" /> */}
-                    <ellipse class="back-ellipse" cx="400" cy="400" rx="400" ry="400" fill="url(#myGradient)" />
+                    <image class={css.blurImage} href="/images/preview/blur.png" x="0" y="0" width="800" height="800" />
+                </g>
+            </g> */}
+            <g mask="url(#front-mask)">
+                <g class={css.blurWrapper}>
+                    <ellipse class="front-ellipse" cx="400" cy="400" rx="400" ry="400" fill="url(#myGradient2)" />
                 </g>
             </g>
             <defs>
-                {/* <filter id="blur">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
-                </filter> */}
-                <linearGradient id="myGradient">
-                    <stop stop-color="#712FFF" />
-                    <stop offset="0.4" cx="50%" stop-color="#712FFF" stop-opacity="0.2" />
-                    <stop offset="0.6" cx="50%" stop-color="#712FFF" stop-opacity="0.2" />
-                    <stop offset="1" stop-color="#712FFF" />
-                </linearGradient>
-            </defs>
-        </svg>
-        {/* <svg viewBox="0 0 800 400" class={css.switchBackground}>
-            <mask id="front-mask">
-                <rect class="mask" x="100" y="50" width="600" height="300" rx="150" stroke="white" stroke-width="10" />
-            </mask>
-            <g class="">
-                <ellipse class="front-ellipse" cx="400" cy="200" rx="400" ry="400" mask="url(#front-mask)" fill="url(#myGradient2)" />
-            </g>
-            <defs>
-                <filter id="blur">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
-                </filter>
                 <linearGradient id="myGradient2">
                     <stop stop-color="#712FFF" />
                     <stop offset="0.4" cx="50%" stop-color="#712FFF" stop-opacity="0.2" />
@@ -75,7 +60,7 @@ const SwitchBackground = component$<Props>(({ on }) => {
                     <stop offset="1" stop-color="#712FFF" />
                 </linearGradient>
             </defs>
-        </svg> */}
+        </svg>
     </>);
 });
 

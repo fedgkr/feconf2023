@@ -19,6 +19,11 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
   const sceneSignal = useSignal<Scene>();
 
   const switchOn = $(() => {
+    const scene = sceneSignal.value!;
+
+    const cqw = knobSignal.value!.parentElement!.offsetWidth;
+
+    scene.getItem(`.${css.knob}`).set(0.2, "transform", "translate", `${cqw}px`);
     sceneSignal.value!.play();
     sceneSignal.value!.once("ended", () => {
       onChangeOn();
@@ -46,9 +51,11 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
         },
         [`.${css.knob}`]: {
           0: {
+            "background-color": "#938da0",
             transform: "translate(0px)",
           },
           0.2: {
+            "background-color": "#fff",
             transform: "translate(100px)",
           },
         },
@@ -85,12 +92,9 @@ const Switch = component$<Props>(({ on, scroll, onChangeOn }) => {
           return;
         }
         if (per >= 100) {
-          // onChangeOn()
+          onChangeOn()
         } else if (per > 50 || e.isClick) {
-          scene.play();
-          scene.once("ended", () => {
-            onChangeOn();
-          });
+          switchOn();
         } else if (per < 50) {
           scene.setDirection("reverse");
           scene.setTime(`${100 - per}%`);
