@@ -8,7 +8,6 @@ import {
 
 import css from './CallForSpeakerSection.module.scss';
 import { SafeLink } from '~/components';
-import { CALL_FOR_SHARE_LINK } from '~/constants';
 
 const CallForSpeakerSection = component$(() => {
   const containerRef = useSignal<Element>();
