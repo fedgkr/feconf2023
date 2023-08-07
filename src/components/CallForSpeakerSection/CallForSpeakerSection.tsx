@@ -64,8 +64,8 @@ const CallForSpeakerSection = component$(() => {
           <br />
           <span>개발에 몰입한 경험을 들려주세요.</span>
         </p>
-        <SafeLink href={CALL_FOR_SHARE_LINK}>
-          <button>스피커 신청하기</button>
+        <SafeLink>
+          <button>마감했습니다</button>
         </SafeLink>
       </div>
       <div

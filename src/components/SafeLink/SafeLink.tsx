@@ -1,7 +1,7 @@
 import { component$, Slot } from '@builder.io/qwik';
 
 interface Props {
-  href: string;
+  href?: string;
 }
 
 const SafeLink = component$<Props>(({ href }) => {
