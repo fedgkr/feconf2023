@@ -1,7 +1,5 @@
 import { component$, Slot } from '@builder.io/qwik';
 
-import { Header } from '~/components';
-
 import '../styles/_main.scss';
 import type { RequestHandler } from '@builder.io/qwik-city';
 import { routeLoader$ } from '@builder.io/qwik-city';
@@ -22,12 +20,5 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 export default component$(() => {
-  return (
-    <>
-      <Header />
-      <main style={{ height: '100%' }}>
-        <Slot />
-      </main>
-    </>
-  );
+  return <Slot />;
 });
