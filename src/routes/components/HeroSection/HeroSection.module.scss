@@ -1,0 +1,61 @@
+:global {
+  body {
+    background-color: #09090B;
+  }
+}
+
+.root {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+}
+
+.centerWrap {
+  position: relative;
+}
+
+.sideText {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 320px;
+  height: 140px;
+}
+
+.ctaSection {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: 60px;
+  text-align: center;
+  transform: translateY(100%);
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #FFFFFFCC;
+  text-align: center;
+}
+
+.button {
+  margin-top: 40px;
+  width: 140px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFFCC;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid white;
+  border-radius: 100px;
+}
