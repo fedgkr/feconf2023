@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  width: 600px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 100px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.sideText {
+  font-size: 14px;
+  color: white;
+}
+
+.logo {
+  width: 68px;
+  height: 30px;
+}

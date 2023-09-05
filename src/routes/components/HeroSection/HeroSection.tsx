@@ -1,9 +1,9 @@
 import { component$ } from '@builder.io/qwik';
 
-import HeroLogo from './assets/hero-logo.png';
-
-import css from './HeroSection.module.scss';
 import { SafeLink } from '~/components';
+
+import HeroLogo from './assets/hero-logo.png';
+import css from './HeroSection.module.scss';
 
 const HeroSection = component$(() => {
   return (

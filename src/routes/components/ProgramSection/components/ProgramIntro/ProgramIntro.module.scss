@@ -1,0 +1,26 @@
+.root {
+  margin-top: 100px;
+  padding: 0 80px;
+
+  h3 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #FAFAFA;
+  }
+}
+
+.title {
+  padding: 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: white;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  word-break: keep-all;
+}

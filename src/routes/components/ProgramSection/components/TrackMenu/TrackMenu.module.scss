@@ -1,0 +1,22 @@
+.root {
+  margin-top: 64px;
+  padding: 0 80px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.item {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &.active {
+    color: #2d2d2d;
+    background-color: white;
+  }
+}
