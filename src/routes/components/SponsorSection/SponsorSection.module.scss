@@ -1,0 +1,13 @@
+.root {
+  width: 720px;
+  margin: 0 auto;
+  padding-bottom: 160px;
+  box-sizing: border-box;
+}
+
+.sponsorList {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 64px;
+}
