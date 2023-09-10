@@ -1,8 +1,10 @@
 import { component$, $ } from '@builder.io/qwik';
 
 import css from './ProgramSection.module.scss';
-import { ProgramHeader, TrackMenu } from './components';
+import { ProgramCard, ProgramHeader, TrackMenu } from './components';
 import SectionIntro from '~/routes/components/SectionIntro';
+import { map } from 'lodash';
+import { programs } from '~/db';
 
 const ProgramSection = component$(() => {
   const handleMenuSelect = $(() => {});
@@ -15,6 +17,11 @@ const ProgramSection = component$(() => {
         description="프론트엔드 엔지니어의 다양한 도전과 경험 프론트엔드 엔지니어의 다양한 도전과 경험 FEConf 파이팅"
       />
       <TrackMenu selected="all" onSelect={handleMenuSelect} />
+      <div class={css.programList}>
+        {map(programs, (program) => (
+          <ProgramCard key={program.title} program={program} />
+        ))}
+      </div>
     </section>
   );
 });
