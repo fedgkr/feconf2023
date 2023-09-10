@@ -1,5 +1,43 @@
 .root {
+  position: relative;
   width: 720px;
   margin: 0 auto;
   padding-bottom: 160px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 64px;
+  padding: 0 80px;
+}
+
+.list li {
+  display: flex;
+  gap: 12px;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  width: 200px;
+  height: 26px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: white;
+}
+
+.content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.80);
+  word-break: keep-all;
 }

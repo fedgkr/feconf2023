@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 
 import css from './OpensourceSection.module.scss';
-import { SectionIntro } from '~/routes/components';
+import { SectionDivider, SectionIntro } from '~/routes/components';
 
 import babelLogo from './assets/babel.png';
 import pretendardLogo from './assets/pretendard.png';
@@ -9,6 +9,7 @@ import pretendardLogo from './assets/pretendard.png';
 const OpensourceSection = component$(() => {
   return (
     <section class={css.root}>
+      <SectionDivider />
       <SectionIntro
         sectionName="OPEN SOURCE"
         title="프론트엔드 개발 생태계를 위해 오픈소스를 후원합니다"

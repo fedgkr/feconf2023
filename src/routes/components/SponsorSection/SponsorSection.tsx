@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import { SectionIntro } from '~/routes/components';
+import { SectionIntro, SectionDivider } from '~/routes/components';
 
 import css from './SponsorSection.module.scss';
 import { SponsorList } from '~/routes/components/SponsorSection/components';
@@ -10,6 +10,7 @@ import { SponsorGrade } from '~/types';
 const SponsorSection = component$(() => {
   return (
     <section class={css.root}>
+      <SectionDivider />
       <SectionIntro
         sectionName="SPONSORS"
         title="FEConf와 함께 하는 기업을 소개합니다"

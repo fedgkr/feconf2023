@@ -14,7 +14,7 @@ const SectionIntro = component$<Props>(
       <header class={css.root}>
         <h3>{sectionName}</h3>
         <h2 class={css.title}>{title}</h2>
-        <p class={css.description}>{description}</p>
+        <p class={css.description} dangerouslySetInnerHTML={description} />
       </header>
     );
   }
