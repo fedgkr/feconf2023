@@ -2,10 +2,11 @@ import { component$ } from '@builder.io/qwik';
 
 import css from './SponsorList.module.scss';
 import { map } from 'lodash';
+import type { Sponsor } from '~/types';
 
 interface Props {
   grade: string;
-  list: { key: string; imageUrl: string }[];
+  list: Sponsor[];
 }
 
 const SponsorList = component$<Props>(({ grade, list }) => {
@@ -30,8 +31,13 @@ const SponsorList = component$<Props>(({ grade, list }) => {
       </header>
       <ul class={css.list}>
         {map(list, (item) => (
-          <li key={item.key}>
-            <img src={item.imageUrl} alt={item.key} />
+          <li key={item.title} class={css.item}>
+            <img
+              src={item.logo.url}
+              width={item.logo.width}
+              height={item.logo.height}
+              alt={item.title}
+            />
           </li>
         ))}
       </ul>

@@ -17,4 +17,14 @@
 
 .list {
   margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 12px;
 }
