@@ -1,5 +1,11 @@
 import { component$ } from '@builder.io/qwik';
-import { HeroSection, ProgramSection, SponsorSection } from './components';
+import {
+  CoCSection,
+  HeroSection,
+  OpensourceSection,
+  ProgramSection,
+  SponsorSection,
+} from './components';
 
 export default component$(() => {
   return (
@@ -7,6 +13,8 @@ export default component$(() => {
       <HeroSection />
       <ProgramSection />
       <SponsorSection />
+      <OpensourceSection />
+      <CoCSection />
     </>
   );
 });
