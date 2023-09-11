@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 
-import Logo from './assets/logo.png';
+import Logo from '~/assets/logo.png';
 
 import css from './ProgramHeader.module.scss';
 

@@ -1,0 +1,60 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    margin-right: 16px;
+  }
+  img {
+    width: 68px;
+    height: 30px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    li {
+      opacity: 0.8;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+      span {
+        margin-left: 6px;
+        color: white;
+      }
+    }
+  }
+  .copyright {
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .end {
+    width: 20px;
+    margin-left: 16px;
+  }
+}
