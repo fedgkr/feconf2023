@@ -5,6 +5,8 @@ import {
   OpensourceSection,
   ProgramSection,
   SponsorSection,
+  TicketInfoSection,
+  Footer,
 } from './components';
 
 export default component$(() => {
@@ -13,8 +15,10 @@ export default component$(() => {
       <HeroSection />
       <ProgramSection />
       <SponsorSection />
+      <TicketInfoSection />
       <OpensourceSection />
       <CoCSection />
+      <Footer />
     </>
   );
 });
