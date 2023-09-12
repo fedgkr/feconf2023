@@ -1,3 +1,5 @@
+@import 'styles/mixin';
+
 :global {
   body {
     background-color: #09090B;
@@ -5,11 +7,18 @@
 }
 
 .root {
+}
+
+.desktop {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100dvh;
+
+  @include respond-to('medium') {
+    display: none;
+  }
 }
 
 .centerWrap {
@@ -17,14 +26,25 @@
 }
 
 .sideText {
+  display: inline-flex;
+  gap: 10px;
   color: white;
   font-size: 20px;
   font-weight: 600;
+
+  svg {
+    width: 20px;
+  }
 }
 
 .logo {
   width: 320px;
   height: 140px;
+
+  @include respond-to('medium') {
+    width: 160px;
+    height: 70px;
+  }
 }
 
 .ctaSection {
@@ -43,6 +63,13 @@
   line-height: 32px;
   color: #FFFFFFCC;
   text-align: center;
+
+  @include respond-to('medium') {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 48px;
+  }
 }
 
 .button {
@@ -58,4 +85,46 @@
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid white;
   border-radius: 100px;
+}
+
+.mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 274px 0;
+
+  @include respond-to('medium') {
+    display: flex;
+  }
+}
+
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.info {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .date {
+    color: rgba(255, 255, 255);
+    font-size: 18px;
+  }
+  .location {
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 18px;
+  }
 }

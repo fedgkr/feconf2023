@@ -2,8 +2,12 @@ import { component$ } from '@builder.io/qwik';
 
 import css from './SectionDivider.module.scss';
 
-const SectionDivider = component$(() => {
-  return <div class={css.root}></div>;
+interface Props {
+  absolute?: boolean;
+}
+
+const SectionDivider = component$<Props>(({ absolute }) => {
+  return <div class={[css.root, { [css.absolute]: absolute }]}></div>;
 });
 
 export default SectionDivider;

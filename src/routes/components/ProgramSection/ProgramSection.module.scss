@@ -1,10 +1,22 @@
+@import 'styles/mixin';
+
 .root {
   width: 720px;
   margin: 0 auto;
   padding-bottom: 160px;
+
+  @include respond-to('medium') {
+    width: 100%;
+    padding: 0 12px 100px 12px;
+  }
 }
 
 .programList {
   margin-top: 40px;
   padding: 0 80px;
+
+  @include respond-to('medium') {
+    width: 100%;
+    padding: 0;
+  }
 }

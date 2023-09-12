@@ -1,9 +1,19 @@
+@import 'styles/mixin';
+
 .root {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   height: 100px;
+
+  @include respond-to('medium') {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 12px 0 12px;
+    height: auto;
+    gap: 24px;
+  }
 }
 
 .logo {
@@ -13,6 +23,10 @@
   svg {
     width: 20px;
     margin-right: 16px;
+
+    @include respond-to('medium') {
+      display: none;
+    }
   }
   img {
     width: 68px;
@@ -23,6 +37,7 @@
 .menu {
   display: flex;
   align-items: center;
+
   ul {
     display: flex;
     align-items: center;
@@ -30,6 +45,8 @@
 
     li {
       opacity: 0.8;
+      line-height: 1.6;
+      
       a {
         display: flex;
         align-items: center;
@@ -56,5 +73,25 @@
   .end {
     width: 20px;
     margin-left: 16px;
+  }
+
+  @include respond-to('medium') {
+    flex-direction: column;
+    align-items: flex-start;
+
+    ul {
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+    }
+
+    .copyright {
+      margin-left: 0;
+      margin-top: 24px;
+    }
+
+    .end {
+      display: none;
+    }
   }
 }

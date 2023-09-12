@@ -1,8 +1,15 @@
+@import 'styles/mixin';
+
 .root {
   position: relative;
   width: 720px;
   margin: 0 auto;
   padding-bottom: 160px;
+
+  @include respond-to('medium') {
+    width: 100%;
+    padding: 0 12px 100px 12px;
+  }
 }
 
 .list {
@@ -11,11 +18,21 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @include respond-to('medium') {
+    width: 100%;
+    margin: 48px auto 0 auto;
+  }
 }
 
 .info {
   display: flex;
   gap: 12px;
+
+  @include respond-to('medium') {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 .title {
@@ -29,6 +46,9 @@
     font-size: 16px;
     font-weight: 600;
     color: white;
+  }
+  @include respond-to('medium') {
+    width: auto;
   }
 }
 

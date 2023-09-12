@@ -1,3 +1,5 @@
+@import 'styles/mixin';
+
 .root {
   display: flex;
   justify-content: space-between;
@@ -9,6 +11,10 @@
   border-radius: 100px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.02);
+
+  @include respond-to('medium') {
+    display: none;
+  }
 }
 
 .sideText {

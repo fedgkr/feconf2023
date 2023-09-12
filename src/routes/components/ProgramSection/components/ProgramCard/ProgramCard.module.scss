@@ -1,5 +1,13 @@
+@import 'styles/mixin';
+
 .root {
   display: flex;
+
+  &:last-child {
+    .content {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .lineWrap {
@@ -10,7 +18,7 @@
 
 .line {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
   bottom: 0;
   width: 1px;
@@ -23,7 +31,6 @@
   height: 20px;
   left: 0;
   top: 0;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +46,10 @@
   flex-direction: column;
   margin-left: 16px;
   padding-bottom: 40px;
+
+  @include respond-to('medium') {
+    padding-bottom: 32px;
+  }
 }
 
 .time {
@@ -63,6 +74,10 @@
   font-size: 14px;
   line-height: 1.3;
   color: white;
+
+  @include respond-to('medium') {
+    margin-top: 4px;
+  }
 }
 
 .description {

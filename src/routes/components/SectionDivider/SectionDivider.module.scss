@@ -14,4 +14,9 @@
     pointer-events: none;
     background: radial-gradient(50% 9.11% at 50% 0%, rgba(92, 75, 161, 0.24) 0%, rgba(92, 75, 161, 0) 100%);
   }
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+  }
 }

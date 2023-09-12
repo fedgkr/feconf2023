@@ -1,9 +1,16 @@
+@import 'styles/mixin';
+
 .root {
   position: relative;
   width: 720px;
   margin: 0 auto;
   padding-bottom: 160px;
   box-sizing: border-box;
+
+  @include respond-to('medium') {
+    width: 100%;
+    padding: 0 12px 100px 12px;
+  }
 }
 
 .sponsorList {
@@ -11,4 +18,8 @@
   flex-direction: column;
   gap: 48px;
   margin-top: 64px;
+
+  @include respond-to('medium') {
+    margin-top: 48px;
+  }
 }

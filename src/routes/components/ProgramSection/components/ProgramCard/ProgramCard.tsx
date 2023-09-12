@@ -39,7 +39,9 @@ const ProgramCard = component$<Props>(
           <span class={css.speaker}>
             {speaker.name} · {speaker.company}
           </span>
-          <p class={css.description} dangerouslySetInnerHTML={description} />
+          {description && (
+            <p class={css.description} dangerouslySetInnerHTML={description} />
+          )}
         </div>
       </div>
     );
