@@ -3,6 +3,7 @@ import { component$ } from '@builder.io/qwik';
 import css from './CoCSection.module.scss';
 import { SectionDivider, SectionIntro } from '~/routes/components';
 import map from 'lodash/map';
+import { useVisible } from '~/hooks';
 
 const codeList = [
   {
@@ -28,6 +29,7 @@ const codeList = [
 ];
 
 const CoCSection = component$(() => {
+  const { visible } = useVisible();
   return (
     <section class={css.root}>
       <SectionDivider />
@@ -39,7 +41,10 @@ const CoCSection = component$(() => {
       <ul class={css.list}>
         {map(codeList, ({ title, content }, key) => (
           <li key={key}>
-            <div class={css.info}>
+            <div
+              class={[css.info, 'fadeInRightSlide', { visible }]}
+              style={{ transitionDelay: `${key * 100}ms` }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -53,7 +58,12 @@ const CoCSection = component$(() => {
               </svg>
               <div class={css.title}>{title}</div>
             </div>
-            <p class={css.content}>{content}</p>
+            <p
+              class={[css.content, 'fadeInRightSlide', { visible }]}
+              style={{ transitionDelay: `${key * 100 + 100}ms` }}
+            >
+              {content}
+            </p>
           </li>
         ))}
       </ul>

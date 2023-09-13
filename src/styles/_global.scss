@@ -36,6 +36,60 @@ ul {
   padding: 0;
 }
 
+.fadeInUpSlide {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity cubic-bezier(0.33, 1, 0.68, 1) 600ms, transform cubic-bezier(0.33, 1, 0.68, 1) 800ms;
+}
+
+.fadeInRightSlide {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity cubic-bezier(0.33, 1, 0.68, 1) 600ms, transform cubic-bezier(0.33, 1, 0.68, 1) 600ms;
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity cubic-bezier(0.33, 1, 0.68, 1) 600ms;
+}
+
+.delay50 {
+  transition-delay: 50ms;
+}
+
+.delay100 {
+  transition-delay: 100ms;
+}
+
+.delay150 {
+  transition-delay: 150ms;
+}
+
+.delay200 {
+  transition-delay: 200ms;
+}
+
+.delay250 {
+  transition-delay: 250ms;
+}
+
+.delay300 {
+  transition-delay: 300ms;
+}
+
+.delay400 {
+  transition-delay: 400ms;
+}
+
+.delay500 {
+  transition-delay: 500ms;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0ms !important;

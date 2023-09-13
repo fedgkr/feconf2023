@@ -3,9 +3,11 @@ import { component$ } from '@builder.io/qwik';
 import css from './ProgramCard.module.scss';
 import type { Program } from '~/types';
 import { ProgramType } from '~/types';
+import { useVisible } from '~/hooks';
 
 interface Props {
   program: Program;
+  index: number;
 }
 
 const orderLookup: Record<number, string> = {
@@ -21,14 +23,19 @@ const trackLookup: Record<ProgramType, string> = {
   [ProgramType.Sponsor]: 'Sponsor Session',
 };
 
-const ProgramCard = component$<Props>(({ program }) => {
+const ProgramCard = component$<Props>(({ program, index }) => {
+  const { visible$ } = useVisible();
   if (!program) {
     return null;
   }
   const orderLabel = orderLookup[program.order];
   const trackLabel = trackLookup[program.type];
+  const delay = index < 5 ? 80 * index : 100;
   return (
-    <div class={css.root}>
+    <div
+      class={[css.root, 'fadeInRightSlide', { visible: visible$.value }]}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       <div class={css.lineWrap}>
         <Icon />
         <div class={css.line} />

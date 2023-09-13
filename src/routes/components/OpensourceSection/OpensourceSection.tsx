@@ -7,8 +7,10 @@ import babelLogo from './assets/babel.png';
 import corejsLogo from './assets/core-js.png';
 import pretendardLogo from './assets/pretendard.png';
 import reactHookFormLogo from './assets/react-hook-form.png';
+import { useVisible } from '~/hooks';
 
 const OpensourceSection = component$(() => {
+  const { visible } = useVisible();
   return (
     <section class={css.root}>
       <SectionDivider />
@@ -19,28 +21,28 @@ const OpensourceSection = component$(() => {
       />
       <div class={css.list}>
         <img
-          class={css.image}
+          class={[css.image, 'fadeInUpSlide', 'delay50', { visible }]}
           src={babelLogo}
           width={77}
           height={30}
           alt="Babel"
         />
         <img
-          class={css.image}
+          class={[css.image, 'fadeInUpSlide', 'delay100', { visible }]}
           src={corejsLogo}
           width={135}
           height={32}
           alt="Corejs"
         />
         <img
-          class={css.image}
+          class={[css.image, 'fadeInUpSlide', 'delay150', { visible }]}
           src={pretendardLogo}
           width={111}
           height={40}
           alt="Pretendard"
         />
         <img
-          class={css.image}
+          class={[css.image, 'fadeInUpSlide', 'delay200', { visible }]}
           src={reactHookFormLogo}
           width={193}
           height={24}

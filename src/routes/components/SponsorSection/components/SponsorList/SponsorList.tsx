@@ -3,16 +3,23 @@ import { component$ } from '@builder.io/qwik';
 import css from './SponsorList.module.scss';
 import map from 'lodash/map';
 import type { Sponsor } from '~/types';
+import { useVisible } from '~/hooks';
 
 interface Props {
   grade: string;
   list: Sponsor[];
+  index: number;
 }
 
-const SponsorList = component$<Props>(({ grade, list }) => {
+const SponsorList = component$<Props>(({ grade, list, index }) => {
+  const { visible } = useVisible();
+  const headerDelay = index * 100;
   return (
     <div class={css.root}>
-      <header class={css.header}>
+      <header
+        class={[css.header, 'fadeInRightSlide', { visible }]}
+        style={{ transitionDelay: `${headerDelay}ms` }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="14"
@@ -30,8 +37,12 @@ const SponsorList = component$<Props>(({ grade, list }) => {
         <h2>{grade}</h2>
       </header>
       <ul class={css.list}>
-        {map(list, (item) => (
-          <li key={item.title} class={css.item}>
+        {map(list, (item, index) => (
+          <li
+            key={item.title}
+            class={[css.item, 'fadeInRightSlide', { visible }]}
+            style={{ transitionDelay: `${headerDelay + (index + 1) * 50}ms` }}
+          >
             <img
               src={item.logo.url}
               width={item.logo.width}

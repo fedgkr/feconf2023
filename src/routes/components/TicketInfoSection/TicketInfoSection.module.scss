@@ -55,10 +55,10 @@
 .description {
   display: flex;
   flex-direction: column;
+}
 
-  li {
-    font-size: 14px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-  }
+.item {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
 }

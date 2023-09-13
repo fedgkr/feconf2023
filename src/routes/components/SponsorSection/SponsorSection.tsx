@@ -20,18 +20,22 @@ const SponsorSection = component$(() => {
         <SponsorList
           grade="DIAMOND"
           list={filter(sponsors, { grade: SponsorGrade.Diamond })}
+          index={0}
         />
         <SponsorList
           grade="PLATINUM"
           list={filter(sponsors, { grade: SponsorGrade.Platinum })}
+          index={1}
         />
         <SponsorList
           grade="GOLD"
           list={filter(sponsors, { grade: SponsorGrade.Gold })}
+          index={2}
         />
         <SponsorList
           grade="ROOKIE"
           list={filter(sponsors, { grade: SponsorGrade.Rookie })}
+          index={3}
         />
       </div>
     </section>

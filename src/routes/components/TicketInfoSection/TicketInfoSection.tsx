@@ -3,6 +3,7 @@ import { component$ } from '@builder.io/qwik';
 import css from './TicketInfoSection.module.scss';
 import { SectionDivider, SectionIntro } from '~/routes/components';
 import map from 'lodash/map';
+import { useVisible } from '~/hooks';
 
 const ticketInfoList = [
   {
@@ -20,6 +21,7 @@ const ticketInfoList = [
 ];
 
 const TicketInfoSection = component$(() => {
+  const { visible } = useVisible();
   return (
     <section class={css.root}>
       <SectionDivider />
@@ -29,9 +31,12 @@ const TicketInfoSection = component$(() => {
         description="올해는 누구나 FEConf 2023을 함께 만들어갈 수 있도록 후원 티켓을 준비했습니다. 후원 금액은 FEConf 2023을 준비하는 데 사용할 예정이며, 입장 티켓 외에도 특별 리워드로 웹사이트와 엔딩 크레딧에 후원자 목록이 노출될 예정입니다."
       />
       <ul class={css.list}>
-        {map(ticketInfoList, ({ title, items }) => (
+        {map(ticketInfoList, ({ title, items }, index) => (
           <li class={css.info} key={title}>
-            <div class={css.title}>
+            <div
+              class={[css.title, 'fadeInRightSlide', { visible }]}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
               <svg width="14" height="14" viewBox="0 0 14 14">
                 <g>
                   <path
@@ -43,8 +48,16 @@ const TicketInfoSection = component$(() => {
               <h4>{title}</h4>
             </div>
             <ul class={css.description}>
-              {map(items, (item) => (
-                <li> · {item}</li>
+              {map(items, (item, itemIndex) => (
+                <li
+                  class={[css.item, 'fadeInRightSlide', { visible }]}
+                  style={{
+                    transitionDelay: `${index * 100 + (itemIndex + 1) * 50}ms`,
+                  }}
+                >
+                  {' '}
+                  · {item}
+                </li>
               ))}
             </ul>
           </li>
