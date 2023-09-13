@@ -16,12 +16,19 @@ const SectionIntro = component$<Props>(
     });
     return (
       <header class={[css.root]}>
-        <h3 class={['fadeInUpSlide', { visible: visible.value }]}>
+        <h3
+          class={[
+            'fadeInUpSlide',
+            'FamiljenGrotesk',
+            { visible: visible.value },
+          ]}
+        >
           {sectionName}
         </h3>
         <h2
           class={[
             css.title,
+
             'fadeInUpSlide',
             'delay100',
             { visible: visible.value },

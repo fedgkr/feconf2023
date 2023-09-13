@@ -19,7 +19,12 @@ body {
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .stretch {
@@ -34,6 +39,10 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.FamiljenGrotesk {
+  font-family: 'Familjen Grotesk', sans-serif;
 }
 
 .fadeInUpSlide {
@@ -100,3 +109,4 @@ ul {
     scroll-behavior: auto !important;
   }
 }
+

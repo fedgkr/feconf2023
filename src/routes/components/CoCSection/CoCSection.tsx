@@ -43,7 +43,7 @@ const CoCSection = component$(() => {
           <li key={key}>
             <div
               class={[css.info, 'fadeInRightSlide', { visible }]}
-              style={{ transitionDelay: `${key * 100}ms` }}
+              style={{ transitionDelay: `${(key + 1) * 100}ms` }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const CoCSection = component$(() => {
             </div>
             <p
               class={[css.content, 'fadeInRightSlide', { visible }]}
-              style={{ transitionDelay: `${key * 100 + 100}ms` }}
+              style={{ transitionDelay: `${(key + 1) * 100 + 100}ms` }}
             >
               {content}
             </p>

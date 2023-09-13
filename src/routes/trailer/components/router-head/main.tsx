@@ -23,7 +23,7 @@ export const Main = component$(() => {
         name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=5.0"
       />
-      <meta name="theme-color" content="#000" />
+      <meta name="theme-color" content="#09090B" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta
         name="keywords"
@@ -58,6 +58,17 @@ export const Main = component$(() => {
         src="https://www.googletagmanager.com/gtag/js?id=G-RVV7YMBQEY"
       />
       <script dangerouslySetInnerHTML={gtagScript} />
+      <link
+        rel="stylesheet"
+        as="style"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap"
+        rel="stylesheet"
+      />
     </>
   );
 });

@@ -15,10 +15,16 @@ const HeroSection = component$(() => {
   return (
     <>
       <section ref={containerRef} class={css.root}>
-        <SectionDivider absolute={true} gradient={80} />
+        <SectionDivider absolute={true} gradient={80} border={false} />
         <div class={css.desktop}>
           <span
-            class={[css.sideText, 'fadeInUpSlide', 'delay300', { visible }]}
+            class={[
+              css.sideText,
+              'FamiljenGrotesk',
+              'fadeInUpSlide',
+              'delay300',
+              { visible },
+            ]}
           >
             <Start /> 2023.10.21 (Sat)
           </span>
@@ -53,13 +59,19 @@ const HeroSection = component$(() => {
             </div>
           </div>
           <span
-            class={[css.sideText, 'fadeInUpSlide', 'delay300', { visible }]}
+            class={[
+              css.sideText,
+              'FamiljenGrotesk',
+              'fadeInUpSlide',
+              'delay300',
+              { visible },
+            ]}
           >
             Lotte Tower Sky 31 <End />
           </span>
         </div>
         <div class={css.mobile}>
-          <div class={css.logoWrap}>
+          <div class={[css.logoWrap, 'fadeInUpSlide', { visible }]}>
             <Start />
             <img
               width={320}
@@ -71,16 +83,28 @@ const HeroSection = component$(() => {
             <End />
           </div>
           <div class={css.info}>
-            <span class={css.date}>2023.10.21 (Sat)</span>
-            <span class={css.location}>Lotte Tower Sky 31</span>
+            <span class={[css.date, 'fadeInUpSlide', 'delay100', { visible }]}>
+              2023.10.21 (Sat)
+            </span>
+            <span
+              class={[css.location, 'fadeInUpSlide', 'delay200', { visible }]}
+            >
+              Lotte Tower Sky 31
+            </span>
           </div>
-          <p class={css.description}>
+          <p
+            class={[css.description, 'fadeInUpSlide', 'delay300', { visible }]}
+          >
             2023년, 프론트엔드 엔지니어들의
             <br />
             치열한 고민과 몰입에 관한 이야기
           </p>
           <SafeLink href={TICKET_LINK}>
-            <button class={css.button}>티켓 구매하기</button>
+            <button
+              class={[css.button, 'fadeInUpSlide', 'delay400', { visible }]}
+            >
+              티켓 구매하기
+            </button>
           </SafeLink>
         </div>
       </section>

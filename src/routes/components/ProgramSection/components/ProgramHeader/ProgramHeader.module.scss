@@ -1,28 +1,40 @@
 @import 'styles/mixin';
 
 .root {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
   width: 600px;
   height: 60px;
-  border: 1px solid white;
   border-radius: 100px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: -1px;
+    width: 500px;
+    background: linear-gradient(to right, transparent 35%, rgba(255, 255, 255, 0.30) 70%, transparent 100%);
+  }
+
+  .sideText {
+    font-size: 14px;
+    color: white;
+  }
+
+  .logo {
+    width: 68px;
+    height: 30px;
+  }
 
   @include respond-to('medium') {
     display: none;
   }
-}
-
-.sideText {
-  font-size: 14px;
-  color: white;
-}
-
-.logo {
-  width: 68px;
-  height: 30px;
 }

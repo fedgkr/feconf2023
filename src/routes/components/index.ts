@@ -1,3 +1,4 @@
+export { default as BackgroundCanvas } from './BackgroundCanvas';
 export { default as HeroSection } from './HeroSection';
 export { default as ProgramSection } from './ProgramSection';
 export { default as SectionIntro } from './SectionIntro';
