@@ -10,7 +10,7 @@ const ProgramHeader = component$(() => {
   return (
     <header class={[css.root, 'fadeIn', { visible }]}>
       <span class={css.sideText}>/* 2023.10.21 (Sat)</span>
-      <img class={css.logo} src={Logo} alt="FEConf" />
+      <img width={69} height={30} class={css.logo} src={Logo} alt="FEConf" />
       <span class={css.sideText}>Lotte Tower Sky 31 */</span>
     </header>
   );

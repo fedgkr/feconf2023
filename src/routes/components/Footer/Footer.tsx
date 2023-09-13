@@ -1,4 +1,4 @@
-import { component$, useVisibleTask$ } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 
 import Logo from '~/assets/logo.png';
 
@@ -7,14 +7,11 @@ import { SafeLink, Start } from '~/components';
 import End from '~/components/End';
 
 const Footer = component$(() => {
-  useVisibleTask$(() => {
-    console.log('hello');
-  });
   return (
     <footer class={css.root}>
       <div class={css.logo}>
         <Start />
-        <img src={Logo} alt="FEConf" />
+        <img width={69} height={30} src={Logo} alt="FEConf" />
       </div>
       <div class={css.menu}>
         <ul>

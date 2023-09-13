@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useSignal } from '@builder.io/qwik';
 
 import { SafeLink, Start } from '~/components';
 
