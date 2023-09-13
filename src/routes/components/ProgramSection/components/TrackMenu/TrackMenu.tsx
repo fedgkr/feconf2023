@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import { eq, map } from 'lodash';
+import eq from 'lodash/eq';
+import map from 'lodash/map';
 
 import css from './TrackMenu.module.scss';
 

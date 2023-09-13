@@ -2,23 +2,23 @@
 # yarn lockfile v1
 
 
-"@builder.io/qwik-city@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.npmjs.org/@builder.io/qwik-city/-/qwik-city-1.2.6.tgz#a162fbbda251b6a5c777ee2d2a821cca84098b19"
-  integrity sha512-/uo58NysxpdsiEwuuKo8HDM9UYYAofrniupor2v5vci3Dr6PTXcvKAFJ1Z+SdJGv2uxr5hvKsbVohnVYa9jxYg==
+"@builder.io/qwik-city@^1.2.11":
+  version "1.2.11"
+  resolved "https://registry.npmjs.org/@builder.io/qwik-city/-/qwik-city-1.2.11.tgz#1c811de9d9c80214dc4be17cd3afd6ab7d54d74b"
+  integrity sha512-meeApo5czwGsn7bywtu2P4bBdRTprwtfjcwE06APvhRF2Y5xK0bv7vW9vGbRvPy/w6o5Izc+CauLepryOcXiGg==
   dependencies:
     "@mdx-js/mdx" "2.3.0"
     "@types/mdx" "2.0.5"
     source-map "0.7.4"
     svgo "^3.0.2"
-    vfile "5.3.7"
-    vite-imagetools "^5.0.4"
+    vfile "^6.0.1"
+    vite-imagetools "^5.0.5"
     zod "^3.21.4"
 
-"@builder.io/qwik@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.npmjs.org/@builder.io/qwik/-/qwik-1.2.6.tgz#010d8dcb39414fe6ea0e482d940fb5eaca86bc40"
-  integrity sha512-Cm1sLAimML55I5T1RI80R1lLgI4cnSeQt5obQtcMKa8wMmf2/luEyQaEkeN2fV3sp/gaVXCfAuKaddXK6ONdww==
+"@builder.io/qwik@^1.2.11":
+  version "1.2.11"
+  resolved "https://registry.npmjs.org/@builder.io/qwik/-/qwik-1.2.11.tgz#94f304dd6de358a5e54023c0f12d6326e58732e4"
+  integrity sha512-C0umHmXhKdMu2dP/UTBEvuoSC1pfYSPC43jzYiF6dMXpQasgyDXIQML8yzrAsxnimr7OfKfn2vNyn2t5e9BG8A==
   dependencies:
     csstype "^3.1.2"
 
@@ -577,6 +577,11 @@
   version "2.0.6"
   resolved "https://registry.npmjs.org/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+
+"@types/unist@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@types/unist/-/unist-3.0.0.tgz#988ae8af1e5239e89f9fbb1ade4c935f4eeedf9a"
+  integrity sha512-MFETx3tbTjE7Uk6vvnWINA/1iJ7LuMdO4fcq8UfF0pRbj01aGLduVvQcRyswuACJdpnHgg8E3rQLhaRdNEJS0w==
 
 "@typescript-eslint/eslint-plugin@5.59.8":
   version "5.59.8"
@@ -3501,6 +3506,13 @@ unist-util-stringify-position@^3.0.0:
   dependencies:
     "@types/unist" "^2.0.0"
 
+unist-util-stringify-position@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/unist-util-stringify-position/-/unist-util-stringify-position-4.0.0.tgz#449c6e21a880e0855bf5aabadeb3a740314abac2"
+  integrity sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==
+  dependencies:
+    "@types/unist" "^3.0.0"
+
 unist-util-visit-parents@^5.1.1:
   version "5.1.3"
   resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-5.1.3.tgz#b4520811b0ca34285633785045df7a8d6776cfeb"
@@ -3556,7 +3568,15 @@ vfile-message@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-stringify-position "^3.0.0"
 
-vfile@5.3.7, vfile@^5.0.0:
+vfile-message@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/vfile-message/-/vfile-message-4.0.2.tgz#c883c9f677c72c166362fd635f21fc165a7d1181"
+  integrity sha512-jRDZ1IMLttGj41KcZvlrYAaI3CfqpLpfpf+Mfig13viT6NKvRzWZ+lXz0Y5D60w6uJIBAOGq9mSHf0gktF0duw==
+  dependencies:
+    "@types/unist" "^3.0.0"
+    unist-util-stringify-position "^4.0.0"
+
+vfile@^5.0.0:
   version "5.3.7"
   resolved "https://registry.npmjs.org/vfile/-/vfile-5.3.7.tgz#de0677e6683e3380fafc46544cfe603118826ab7"
   integrity sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==
@@ -3566,10 +3586,19 @@ vfile@5.3.7, vfile@^5.0.0:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-imagetools@^5.0.4:
-  version "5.0.7"
-  resolved "https://registry.npmjs.org/vite-imagetools/-/vite-imagetools-5.0.7.tgz#b2d3f380dca1bb9d5bcc511c9af960e4bf205d7e"
-  integrity sha512-8g7RU+liA4uWuujSe3hdMTCNWimMJsdLIU5uB+/SUBQ+j0TcaMKnQZ6n4LCBF2w30ml1X8WNFGOcTblquWrgGQ==
+vfile@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/vfile/-/vfile-6.0.1.tgz#1e8327f41eac91947d4fe9d237a2dd9209762536"
+  integrity sha512-1bYqc7pt6NIADBJ98UiG0Bn/CHIVOoZ/IyEkqIruLg0mE1BKzkOXY2D6CSqQIcKqgadppE5lrxgWXJmXd7zZJw==
+  dependencies:
+    "@types/unist" "^3.0.0"
+    unist-util-stringify-position "^4.0.0"
+    vfile-message "^4.0.0"
+
+vite-imagetools@^5.0.5:
+  version "5.0.8"
+  resolved "https://registry.npmjs.org/vite-imagetools/-/vite-imagetools-5.0.8.tgz#b38375903658ef993de806bea52889f4097b9c40"
+  integrity sha512-oFNfc58iLz1lHFsIKQy+wp0RNcZjiaDeHYTexYowpf4RYx9tZ97eWEcw8lQ1jDT8AnOso6XZi5iGjLNAeTR9Tw==
   dependencies:
     "@rollup/pluginutils" "^5.0.2"
     imagetools-core "^4.0.5"

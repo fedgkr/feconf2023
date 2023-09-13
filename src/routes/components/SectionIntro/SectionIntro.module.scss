@@ -22,6 +22,16 @@
   font-weight: 600;
   line-height: 1.6;
   color: white;
+
+  br {
+    display: none;
+  }
+  
+  @include respond-to('medium') {
+    br {
+      display: block;
+    }
+  }
 }
 
 .description {

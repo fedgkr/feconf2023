@@ -4,7 +4,7 @@ import { SectionIntro, SectionDivider } from '~/routes/components';
 import css from './SponsorSection.module.scss';
 import { SponsorList } from '~/routes/components/SponsorSection/components';
 import { sponsors } from '~/db';
-import { filter } from 'lodash';
+import filter from 'lodash/filter';
 import { SponsorGrade } from '~/types';
 
 const SponsorSection = component$(() => {

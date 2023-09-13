@@ -12,7 +12,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-RVV7YMBQEY');`;
 
-export const RouterHead = component$(() => {
+export const Preview = component$(() => {
   return (
     <>
       {/* Global Meta */}

@@ -21,32 +21,36 @@ const trackLookup: Record<ProgramType, string> = {
   [ProgramType.Sponsor]: 'Sponsor Session',
 };
 
-const ProgramCard = component$<Props>(
-  ({ program: { title, description, speaker, type, order } }) => {
-    const orderLabel = orderLookup[order];
-    const trackLabel = trackLookup[type];
-    return (
-      <div class={css.root}>
-        <div class={css.lineWrap}>
-          <Icon />
-          <div class={css.line} />
-        </div>
-        <div class={css.content}>
-          <span class={css.time}>
-            {orderLabel} / {trackLabel}
-          </span>
-          <h2 class={css.title}>{title}</h2>
-          <span class={css.speaker}>
-            {speaker.name} · {speaker.company}
-          </span>
-          {description && (
-            <p class={css.description} dangerouslySetInnerHTML={description} />
-          )}
-        </div>
-      </div>
-    );
+const ProgramCard = component$<Props>(({ program }) => {
+  if (!program) {
+    return null;
   }
-);
+  const orderLabel = orderLookup[program.order];
+  const trackLabel = trackLookup[program.type];
+  return (
+    <div class={css.root}>
+      <div class={css.lineWrap}>
+        <Icon />
+        <div class={css.line} />
+      </div>
+      <div class={css.content}>
+        <span class={css.time}>
+          {orderLabel} / {trackLabel}
+        </span>
+        <h2 class={css.title}>{program.title}</h2>
+        <span class={css.speaker}>
+          {program.speaker.name} · {program.speaker.company}
+        </span>
+        {program.description && (
+          <p
+            class={css.description}
+            dangerouslySetInnerHTML={program.description}
+          />
+        )}
+      </div>
+    </div>
+  );
+});
 
 const Icon = component$(() => (
   <div class={css.icon}>

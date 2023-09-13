@@ -13,7 +13,7 @@ const SectionIntro = component$<Props>(
     return (
       <header class={css.root}>
         <h3>{sectionName}</h3>
-        <h2 class={css.title}>{title}</h2>
+        <h2 class={css.title} dangerouslySetInnerHTML={title} />
         <p class={css.description} dangerouslySetInnerHTML={description} />
       </header>
     );

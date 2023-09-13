@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 
 import css from './SponsorList.module.scss';
-import { map } from 'lodash';
+import map from 'lodash/map';
 import type { Sponsor } from '~/types';
 
 interface Props {

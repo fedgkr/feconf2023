@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 
 import css from './TicketInfoSection.module.scss';
 import { SectionDivider, SectionIntro } from '~/routes/components';
-import { map } from 'lodash';
+import map from 'lodash/map';
 
 const ticketInfoList = [
   {

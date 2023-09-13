@@ -4,7 +4,7 @@ import {
   RouterOutlet,
   ServiceWorkerRegister,
 } from '@builder.io/qwik-city';
-import { RouterHead } from '~/routes/trailer/components/router-head/router-head';
+import { Main } from '~/routes/trailer/components/router-head/main';
 
 import '~/styles/_main.scss';
 
@@ -12,7 +12,7 @@ export default component$(() => {
   return (
     <QwikCityProvider>
       <head>
-        <RouterHead />
+        <Main />
       </head>
       <body lang="ko">
         <RouterOutlet />

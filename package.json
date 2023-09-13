@@ -27,8 +27,8 @@
     "deploy": "yarn export && yarn push"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.2.6",
-    "@builder.io/qwik-city": "^1.2.6",
+    "@builder.io/qwik": "^1.2.11",
+    "@builder.io/qwik-city": "^1.2.11",
     "@types/eslint": "8.40.0",
     "@types/lodash": "^4.14.198",
     "@types/node": "^20.2.5",
