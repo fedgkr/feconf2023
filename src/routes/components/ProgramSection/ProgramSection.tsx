@@ -8,7 +8,7 @@ import filter from 'lodash/filter';
 import SectionDivider from '../SectionDivider';
 import type { Program, ProgramType } from '~/types';
 import eq from 'lodash/eq';
-import { isUndefined } from 'lodash';
+import isUndefined from 'lodash/isUndefined';
 import { programs } from '~/db';
 
 const ProgramSection = component$(() => {
