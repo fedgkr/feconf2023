@@ -3,7 +3,8 @@ import { EVENT_DATE_STR } from '~/constants';
 
 const title = 'FECONF 2023';
 const description = `국내 최대 프론트엔드 개발 컨퍼런스, FECONF 2023가 ${EVENT_DATE_STR} 오프라인으로 찾아옵니다.`;
-const host = 'https://2023.feconf.kr';
+// const host = 'https://2023.feconf.kr';
+const host = 'https://feconf2023-codemilli.vercel.app';
 const ogImage = `${host}/images/main/og.png`;
 
 const gtagScript = `
