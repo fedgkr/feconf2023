@@ -8,7 +8,7 @@
   "homepage": "https://2023.feconf.kr",
   "license": "MIT",
   "scripts": {
-    "build": "qwik build -c adapters/static/vite.config.ts",
+    "build": "yarn lint && qwik build -c adapters/static/vite.config.ts",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/static/vite.config.ts",
