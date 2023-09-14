@@ -90,21 +90,18 @@
   backdrop-filter: blur(3px);
   z-index: 1;
 
-  &:before {
+  &:before, &:after {
     content: "";
     position: absolute;
     height: 1px;
-    top: -1px;
     width: 100px;
     background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.30), transparent);
   }
+  &:before {
+    top: -1px;
+  }
   &:after {
-    content: "";
-    position: absolute;
-    height: 1px;
     bottom: -1px;
-    width: 100px;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.30), transparent);
   }
 }
 
