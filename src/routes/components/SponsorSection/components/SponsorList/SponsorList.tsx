@@ -4,6 +4,7 @@ import css from './SponsorList.module.scss';
 import map from 'lodash/map';
 import type { Sponsor } from '~/types';
 import { useVisible } from '~/hooks';
+import { SafeLink } from '~/components';
 
 interface Props {
   grade: string;
@@ -43,12 +44,14 @@ const SponsorList = component$<Props>(({ grade, list, index }) => {
             class={[css.item, 'fadeInRightSlide', { visible }]}
             style={{ transitionDelay: `${headerDelay + (index + 1) * 50}ms` }}
           >
-            <img
-              src={item.logo.url}
-              width={item.logo.width}
-              height={item.logo.height}
-              alt={item.title}
-            />
+            <SafeLink href={item.link}>
+              <img
+                src={item.logo.url}
+                width={item.logo.width}
+                height={item.logo.height}
+                alt={item.title}
+              />
+            </SafeLink>
           </li>
         ))}
       </ul>

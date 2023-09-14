@@ -26,36 +26,25 @@ const OpensourceSection = component$(() => {
 const OpensourceList = component$(() => {
   const { visible } = useVisible();
   return (
-    <div class={css.list}>
-      <img
-        class={[css.image, 'fadeInUpSlide', 'delay100', { visible }]}
-        src={babelLogo}
-        width={77}
-        height={30}
-        alt="Babel"
-      />
-      <img
-        class={[css.image, 'fadeInUpSlide', 'delay200', { visible }]}
-        src={corejsLogo}
-        width={135}
-        height={32}
-        alt="Corejs"
-      />
-      <img
-        class={[css.image, 'fadeInUpSlide', 'delay300', { visible }]}
-        src={pretendardLogo}
-        width={111}
-        height={40}
-        alt="Pretendard"
-      />
-      <img
-        class={[css.image, 'fadeInUpSlide', 'delay400', { visible }]}
-        src={reactHookFormLogo}
-        width={193}
-        height={24}
-        alt="React Hook Form"
-      />
-    </div>
+    <ul class={css.list}>
+      <li class={[css.image, 'fadeInUpSlide', 'delay100', { visible }]}>
+        <img src={babelLogo} width={77} height={30} alt="Babel" />
+      </li>
+      <li class={[css.image, 'fadeInUpSlide', 'delay200', { visible }]}>
+        <img src={corejsLogo} width={135} height={32} alt="Corejs" />
+      </li>
+      <li class={[css.image, 'fadeInUpSlide', 'delay300', { visible }]}>
+        <img src={pretendardLogo} width={111} height={40} alt="Pretendard" />
+      </li>
+      <li class={[css.image, 'fadeInUpSlide', 'delay400', { visible }]}>
+        <img
+          src={reactHookFormLogo}
+          width={193}
+          height={24}
+          alt="React Hook Form"
+        />
+      </li>
+    </ul>
   );
 });
 

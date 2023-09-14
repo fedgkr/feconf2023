@@ -13,7 +13,7 @@
 }
 
 .list {
-  margin: 64px auto 0 auto;
+  margin: 48px auto 0 auto;
   display: flex;
   width: 540px;
   justify-content: center;
@@ -21,17 +21,17 @@
   flex-wrap: wrap;
 
   @include respond-to('medium') {
-    margin: 48px auto 0 auto;
+    margin: 32px auto 0 auto;
     width: 100%;
   }
 }
 
 .image {
+  display: flex;
+  align-items: center;
+  height: 40px;
   padding: 0 12px;
   margin-right: 12px;
   box-sizing: content-box;
-
-  &:last-child {
-    margin-top: 20px;
-  }
+  margin-top: 16px;
 }

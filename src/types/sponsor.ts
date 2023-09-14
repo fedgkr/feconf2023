@@ -8,6 +8,7 @@ enum SponsorGrade {
 interface Sponsor {
   grade: SponsorGrade;
   title: string;
+  link: string;
   logo: {
     url: string;
     width: number;
