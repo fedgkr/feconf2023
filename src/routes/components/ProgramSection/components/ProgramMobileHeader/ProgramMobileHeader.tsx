@@ -4,6 +4,8 @@ import Logo from '~/assets/logo.png';
 
 import css from './ProgramMobileHeader.module.scss';
 import { useVisible } from '~/hooks';
+import { SafeLink } from '~/components';
+import { TICKET_LINK } from '~/db';
 
 const ProgramMobileHeader = component$(() => {
   const { visible } = useVisible();
@@ -21,7 +23,11 @@ const ProgramMobileHeader = component$(() => {
           2023.10.21 (Sat)
         </span>
       </div>
-      <button class={[css.button, 'fadeIn', { visible }]}>티켓 구매하기</button>
+      <SafeLink href={TICKET_LINK}>
+        <button class={[css.button, 'fadeIn', { visible }]}>
+          티켓 구매하기
+        </button>
+      </SafeLink>
     </header>
   );
 });

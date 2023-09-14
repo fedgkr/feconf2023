@@ -23,14 +23,14 @@ const trackLookup: Record<ProgramType, string> = {
   [ProgramType.Sponsor]: 'Sponsor Session',
 };
 
-const ProgramCard = component$<Props>(({ program, index }) => {
+const ProgramCard = component$<Props>(({ program }) => {
   const { visible$ } = useVisible();
   if (!program) {
     return null;
   }
   const orderLabel = orderLookup[program.order];
   const trackLabel = trackLookup[program.type];
-  const delay = index < 5 ? 80 * index : 100;
+  const delay = 100;
   return (
     <div
       class={[css.root, 'fadeInRightSlide', { visible: visible$.value }]}
