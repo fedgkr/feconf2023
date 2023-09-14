@@ -30,6 +30,7 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 60px;
 
   svg {
     width: 20px;
@@ -40,6 +41,7 @@
 .logo {
   width: 320px;
   height: 140px;
+  margin-bottom: 60px;
 
   @include respond-to('medium') {
     width: 160px;
@@ -52,7 +54,6 @@
   right: 0;
   left: 0;
   bottom: 0;
-  padding-top: 60px;
   text-align: center;
   transform: translateY(100%);
 }
