@@ -37,7 +37,7 @@ const programs: Program[] = [
   {
     type: ProgramType.A,
     order: 2,
-    title: 'Suspense를 트리거 할 use 훅을 소개합니다',
+    title: 'use 훅이 바꿀 리액트 비동기 처리의 미래 맛보기',
     description:
       'React 18에 Suspense가 정식 도입 되었지만, 아직 Suspense를 트리거할 use 훅은 출시되지 않았습니다. 정식 출시될 use훅이 바꿀 리액트에서 데이터 로딩의 미래를 소개하고, 이를 활용해 쿠키런: 킹덤의 어드민 툴용 게임 리소스 데이터 로더를 효율적으로 개선한 경험을 공유합니다.',
     speaker: {
