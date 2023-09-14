@@ -16,10 +16,9 @@
 .sponsorList {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  margin-top: 64px;
+  padding-top: 12px;
 
   @include respond-to('medium') {
-    margin-top: 48px;
+    padding-top: 0;
   }
 }

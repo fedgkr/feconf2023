@@ -2,6 +2,7 @@
 
 .root {
   padding: 0 80px;
+  margin-top: 48px;
 
   @include respond-to('medium') {
     padding: 0;
@@ -25,7 +26,6 @@
   margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
 }
 
 .item {
@@ -33,4 +33,5 @@
   align-items: center;
   height: 40px;
   padding: 0 12px;
+  margin-right: 16px;
 }

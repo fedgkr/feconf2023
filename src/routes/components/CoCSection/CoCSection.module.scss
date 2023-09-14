@@ -15,35 +15,39 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   margin-top: 64px;
   padding: 0 80px;
 
   @include respond-to('medium') {
     margin-top: 48px;
     padding: 0;
-    gap: 32px;
   }
 }
 
 .list li {
   display: flex;
-  gap: 12px;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
 
   @include respond-to('medium') {
     flex-direction: column;
-    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 }
 
 .info {
   display: flex;
-  gap: 10px;
   justify-content: flex-start;
   align-items: center;
   flex-shrink: 0;
   width: 200px;
   height: 26px;
+  margin-right: 12px;
 }
 
 .title {
@@ -51,6 +55,7 @@
   font-weight: 600;
   line-height: 1.6;
   color: white;
+  margin-left: 10px;
 }
 
 .content {
@@ -58,4 +63,8 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.80);
   word-break: keep-all;
+
+  @include respond-to('medium') {
+    margin-top: 10px;
+  }
 }

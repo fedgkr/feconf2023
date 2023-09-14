@@ -12,7 +12,6 @@
     align-items: flex-start;
     padding: 80px 12px 0 12px;
     height: auto;
-    gap: 24px;
   }
 }
 
@@ -41,11 +40,14 @@
   ul {
     display: flex;
     align-items: center;
-    gap: 24px;
 
     li {
       opacity: 0.8;
       line-height: 1.6;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
 
       a {
         display: flex;
@@ -78,11 +80,15 @@
   @include respond-to('medium') {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 24px;
 
     ul {
       flex-direction: column;
-      gap: 4px;
       align-items: flex-start;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 4px;
     }
 
     .copyright {
