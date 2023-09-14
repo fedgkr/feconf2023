@@ -109,10 +109,10 @@
   display: none;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh /* fallback for Opera, IE and etc. */;
-  height: 100dvh;
-  padding: 160px 0 230px 0;
+  height: 100lvh;
 
   @include respond-to('medium') {
     display: flex;

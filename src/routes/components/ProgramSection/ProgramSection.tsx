@@ -20,7 +20,6 @@ const ProgramSection = component$(() => {
     isUndefined(currentTrack.value) ? true : eq(type, currentTrack.value);
   return (
     <section class={css.root}>
-      <ProgramHeader />
       <SectionDivider />
       <SectionIntro
         sectionName="PROGRAM"

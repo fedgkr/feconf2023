@@ -3,6 +3,7 @@
 .root {
   padding: 0 80px;
   margin-top: 48px;
+  margin-bottom: -16px;
 
   @include respond-to('medium') {
     padding: 0;
@@ -34,4 +35,5 @@
   height: 40px;
   padding: 0 12px;
   margin-right: 16px;
+  margin-bottom: 16px;
 }

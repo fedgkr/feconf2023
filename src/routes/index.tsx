@@ -10,7 +10,10 @@ import {
   Footer,
 } from './components';
 import { useVisible } from '~/hooks';
-import { ProgramMobileHeader } from '~/routes/components/ProgramSection/components';
+import {
+  ProgramHeader,
+  ProgramMobileHeader,
+} from '~/routes/components/ProgramSection/components';
 
 export default component$(() => {
   const { visible } = useVisible();
@@ -18,6 +21,7 @@ export default component$(() => {
     <>
       <HeroSection />
       <ProgramMobileHeader />
+      <ProgramHeader />
       <ProgramSection />
       <SponsorSection />
       <TicketInfoSection />

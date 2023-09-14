@@ -29,6 +29,7 @@
 .image {
   padding: 0 12px;
   margin-right: 12px;
+  box-sizing: content-box;
 
   &:last-child {
     margin-top: 20px;
