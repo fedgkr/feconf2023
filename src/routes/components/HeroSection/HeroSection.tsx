@@ -49,12 +49,11 @@ const HeroSection = component$(() => {
                 <br />
                 치열한 고민과 몰입에 관한 이야기
               </p>
-              <SafeLink href={TICKET_LINK}>
-                <button
-                  class={[css.button, 'fadeInUpSlide', 'delay200', { visible }]}
-                >
-                  티켓 구매하기
-                </button>
+              <SafeLink
+                href={TICKET_LINK}
+                class={[css.button, 'fadeInUpSlide', 'delay200', { visible }]}
+              >
+                티켓 구매하기
               </SafeLink>
             </div>
           </div>
@@ -99,12 +98,11 @@ const HeroSection = component$(() => {
             <br />
             치열한 고민과 몰입에 관한 이야기
           </p>
-          <SafeLink href={TICKET_LINK}>
-            <button
-              class={[css.button, 'fadeInUpSlide', 'delay400', { visible }]}
-            >
-              티켓 구매하기
-            </button>
+          <SafeLink
+            href={TICKET_LINK}
+            class={[css.button, 'fadeInUpSlide', 'delay400', { visible }]}
+          >
+            티켓 구매하기
           </SafeLink>
         </div>
       </section>

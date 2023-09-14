@@ -41,10 +41,11 @@ const ProgramMobileHeader = component$(() => {
           2023.10.21 (Sat)
         </span>
       </div>
-      <SafeLink href={TICKET_LINK}>
-        <button class={[css.button, 'fadeIn', { visible: visible.value }]}>
-          티켓 구매하기
-        </button>
+      <SafeLink
+        href={TICKET_LINK}
+        class={[css.button, 'fadeIn', { visible: visible.value }]}
+      >
+        티켓 구매하기
       </SafeLink>
     </header>
   );
