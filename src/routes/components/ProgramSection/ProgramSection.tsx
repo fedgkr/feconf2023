@@ -1,7 +1,7 @@
 import { component$, $, useSignal } from '@builder.io/qwik';
 
 import css from './ProgramSection.module.scss';
-import { ProgramCard, ProgramHeader, TrackMenu } from './components';
+import { ProgramCard, TrackMenu } from './components';
 import SectionIntro from '~/routes/components/SectionIntro';
 import map from 'lodash/map';
 import filter from 'lodash/filter';
