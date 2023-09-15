@@ -107,7 +107,7 @@ const programs: Program[] = [
     order: 4,
     title: '이벤트 기반 웹뷰 프레임워크 설계와 플러그인 생태계 만들기',
     description:
-      '웹뷰 프레임워크 Stackflow를 만들게 된 핵심 문제를 소개하고, Stackflow의 기초적인 이벤트 기반 설계로의 리팩토링과 그것을 활용한 플러그인 인터페이스를 소개합니다. 그리고 플러그인을 통한 확장 가능한 설계로 사내 개발 생태계를 구축한 사례 등 프레임워크를 만들며 얻은 핵심 설계 노하우들을 공개합니다. (https://github.com/daangn/stackflow)',
+      '웹뷰 프레임워크 Stackflow를 만들게 된 핵심 문제를 소개하고, Stackflow의 기초적인 이벤트 기반 설계로의 리팩토링과 그것을 활용한 플러그인 인터페이스를 소개합니다. 그리고 플러그인을 통한 확장 가능한 설계로 사내 개발 생태계를 구축한 사례 등 프레임워크를 만들며 얻은 핵심 설계 노하우들을 공개합니다. <a href="https://github.com/daangn/stackflow" target="_blank" rel="noreferrer">(https://github.com/daangn/stackflow)</a>',
     speaker: {
       name: '원지혁',
       company: '당근',

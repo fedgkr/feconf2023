@@ -82,4 +82,19 @@
   font-size: 14px;
   line-height: 1.6;
   word-break: keep-all;
+
+  a {
+    color: rgba(255, 255, 255, 0.80);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+    text-decoration-color: hsl(0 0% 88.7%);
+    text-underline-position: under;
+
+    transition: text-decoration-color 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration-color: hsl(0 0% 43.5%);
+    }
+  }
 }
