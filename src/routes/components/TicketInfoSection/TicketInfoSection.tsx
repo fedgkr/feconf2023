@@ -27,7 +27,7 @@ const TicketInfoSection = component$(() => {
       <SectionIntro
         sectionName="TICKETS"
         title="올해는 후원 티켓을 준비했어요"
-        description="올해는 누구나 FEConf 2023을 함께 만들어갈 수 있도록 후원 티켓을 준비했습니다. 후원 금액은 FEConf 2023을 준비하는 데 사용할 예정이며, 입장 티켓 외에도 특별 리워드로 웹사이트와 엔딩 크레딧에 후원자 목록이 노출될 예정입니다."
+        description="올해는 누구나 FEConf 2023을 함께 만들어갈 수 있도록 후원 티켓을 준비했습니다. 후원 금액은 FEConf 2023을 준비하고 오픈소스를 후원하는 데 사용할 예정이며, 입장 티켓 외에도 특별 리워드로 웹사이트와 엔딩 크레딧에 후원자 목록이 노출될 예정입니다."
       />
       <TicketList />
     </section>
