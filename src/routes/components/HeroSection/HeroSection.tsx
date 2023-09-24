@@ -53,7 +53,8 @@ const HeroSection = component$(() => {
                 href={TICKET_LINK}
                 class={[css.button, 'fadeInUpSlide', 'delay200', { visible }]}
               >
-                티켓 구매하기
+                <BorderMaskBox />
+                <span>티켓 구매하기</span>
               </SafeLink>
             </div>
           </div>
@@ -102,12 +103,23 @@ const HeroSection = component$(() => {
             href={TICKET_LINK}
             class={[css.button, 'fadeInUpSlide', 'delay400', { visible }]}
           >
-            티켓 구매하기
+            <BorderMaskBox />
+            <span>티켓 구매하기</span>
           </SafeLink>
         </div>
       </section>
     </>
   );
 });
+
+function BorderMaskBox() {
+  return (
+    <div class={[css.borderMaskRoot]}>
+      <div class={[css.borderMask]}>
+        <div class={[css.borderMaskInner]}/>
+      </div>
+    </div>
+  )
+}
 
 export default HeroSection;
