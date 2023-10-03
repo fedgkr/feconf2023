@@ -10,6 +10,7 @@ import fastcampusLogo from '~/assets/sponsors/fastcampus.png';
 import hyundaiLogo from '~/assets/sponsors/hyundai.png';
 import ncLogo from '~/assets/sponsors/nc.png';
 import twipLogo from '~/assets/sponsors/twip.png';
+import greetingLogo from '~/assets/sponsors/greeting.png';
 
 // 토스: https://toss.im/career/jobs
 // 당근: https://about.daangn.com/
@@ -20,6 +21,7 @@ import twipLogo from '~/assets/sponsors/twip.png';
 // 이제이엔: https://www.ejn.team/
 // 패캠: https://fastcampus.co.kr/instructor_apply
 // nc: https://careers.ncsoft.com
+// greeting: https://www.greetinghr.com
 
 const sponsors: Sponsor[] = [
   {
@@ -110,6 +112,16 @@ const sponsors: Sponsor[] = [
       url: twipLogo,
       width: 64,
       height: 18,
+    },
+  },
+  {
+    grade: SponsorGrade.Rookie,
+    title: 'greeting',
+    link: 'https://www.greetinghr.com',
+    logo: {
+      url: greetingLogo,
+      width: 117,
+      height: 24,
     },
   },
 ];
