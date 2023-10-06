@@ -44,8 +44,9 @@ const ProgramMobileHeader = component$(() => {
       <SafeLink
         href={TICKET_LINK}
         class={[css.button, 'fadeIn', { visible: visible.value }]}
+        disabled={true}
       >
-        티켓 구매하기
+        Sold Out
       </SafeLink>
     </header>
   );
