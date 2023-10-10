@@ -98,8 +98,8 @@
   bottom: -1px;
   border-radius: 100px;
   position: absolute;
-  width: calc(100% + 1px);
-  height: calc(100% + 1px);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   border: 1px solid transparent;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
@@ -114,13 +114,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
 
-.borderMaskInner {
-  width: 100%;
-  height: 400%;
-  animation: border-button-keyframe 2s linear infinite;
-  background: conic-gradient(#0000 135deg,rgba(255, 255, 255, 0.30) 180deg,#0000 225deg);
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 400%;
+    animation: border-button-keyframe 2s linear infinite;
+    background: conic-gradient(#0000 135deg,rgba(255, 255, 255, 0.30) 180deg,#0000 225deg);
+  }
 }
 
 @keyframes border-button-keyframe {
