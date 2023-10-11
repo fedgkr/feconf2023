@@ -118,7 +118,6 @@ function BorderMaskBox() {
   return (
     <div class={[css.borderMaskRoot]}>
       <div class={[css.borderMask]}>
-        <div class={[css.borderMaskInner]} />
       </div>
     </div>
   );
