@@ -161,6 +161,10 @@ const programs: Program[] = [
     order: 5,
     title: '당신의 이력서는 안녕하신가요? - 숨고 라이브 코칭',
     description: '',
+    extraAction: {
+      label: '이력서 코칭 접수',
+      link: 'https://forms.gle/a6JDTByC1XqjQVfm6',
+    },
     speaker: {
       name: '숨고',
     },

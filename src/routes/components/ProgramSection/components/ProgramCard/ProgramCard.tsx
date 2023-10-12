@@ -4,6 +4,7 @@ import css from './ProgramCard.module.scss';
 import type { Program } from '~/types';
 import { ProgramType } from '~/types';
 import { useVisible } from '~/hooks';
+import { SafeLink } from '~/components';
 
 interface Props {
   program: Program;
@@ -56,6 +57,11 @@ const ProgramCard = component$<Props>(({ program }) => {
             class={css.description}
             dangerouslySetInnerHTML={program.description}
           />
+        )}
+        {program.extraAction && (
+          <SafeLink class={css.extraLink} href={program.extraAction.link}>
+            {program.extraAction.label}
+          </SafeLink>
         )}
       </div>
     </div>

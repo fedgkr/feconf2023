@@ -13,6 +13,10 @@ interface Program {
     name: string;
     company?: string;
   };
+  extraAction?: {
+    link: string;
+    label: string;
+  };
 }
 
 export { ProgramType };
