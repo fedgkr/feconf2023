@@ -31,7 +31,7 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: '토스',
-      company: '토스',
+      company: '비바리퍼블리카',
     },
   },
   {
@@ -63,7 +63,7 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: 'Quotabook',
-      company: 'Quotabook',
+      company: '쿼타랩',
     },
   },
   {
@@ -95,7 +95,7 @@ const programs: Program[] = [
   {
     type: ProgramType.Sponsor,
     order: 3,
-    title: '현대자동차 세션 공개 예정',
+    title: '현대자동차 네트워킹 세션',
     description: '',
     speaker: {
       name: '현대자동차',
@@ -129,7 +129,7 @@ const programs: Program[] = [
   {
     type: ProgramType.Sponsor,
     order: 4,
-    title: '엘리스 세션 공개 예정',
+    title: '디지털 트랜스포메이션(DX)을 위한 엘리스의 WebRTC 기술 적용 이야기',
     description: '',
     speaker: {
       name: '엘리스',
@@ -163,11 +163,11 @@ const programs: Program[] = [
   {
     type: ProgramType.Sponsor,
     order: 5,
-    title: '숨고 세션 공개 예정',
+    title: '당신의 이력서는 안녕하신가요? - 숨고 라이브 코칭',
     description: '',
     speaker: {
       name: '숨고',
-      company: '숨고',
+      company: '브레이브모바일',
     },
   },
 ];
