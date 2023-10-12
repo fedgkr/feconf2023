@@ -46,7 +46,10 @@ const ProgramCard = component$<Props>(({ program }) => {
         </span>
         <h2 class={css.title}>{program.title}</h2>
         <span class={css.speaker}>
-          {program.speaker.name} · {program.speaker.company}
+          {program.speaker.name}
+          {program.speaker.company?.length > 0 && (
+            <span> · {program.speaker.company}</span>
+          )}
         </span>
         {program.description && (
           <p

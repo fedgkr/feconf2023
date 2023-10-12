@@ -11,7 +11,7 @@ interface Program {
   order: number;
   speaker: {
     name: string;
-    company: string;
+    company?: string;
   };
 }
 

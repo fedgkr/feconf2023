@@ -31,7 +31,6 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: '토스',
-      company: '비바리퍼블리카',
     },
   },
   {
@@ -59,11 +58,10 @@ const programs: Program[] = [
   {
     type: ProgramType.Sponsor,
     order: 2,
-    title: '쿼타랩 라이브 토크쇼 : 일 잘 하는 개발자는 무엇일까?',
+    title: '가장 빠르게 20억을 벌 수 있는 투자법: 스톡옵션',
     description: '',
     speaker: {
       name: 'Quotabook',
-      company: '쿼타랩',
     },
   },
   {
@@ -99,7 +97,6 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: '현대자동차',
-      company: '현대자동차',
     },
   },
   {
@@ -133,7 +130,6 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: '엘리스',
-      company: '엘리스',
     },
   },
   {
@@ -167,7 +163,6 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: '숨고',
-      company: '브레이브모바일',
     },
   },
 ];
