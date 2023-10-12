@@ -37,7 +37,8 @@ const sponsors: Sponsor[] = [
   {
     grade: SponsorGrade.Diamond,
     title: 'Soomgo',
-    link: 'https://career.soomgo.com/',
+    // link: 'https://career.soomgo.com/',
+    link: 'https://forms.gle/a6JDTByC1XqjQVfm6',
     logo: {
       url: soomgoLogo,
       width: 86,
