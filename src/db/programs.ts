@@ -61,7 +61,7 @@ const programs: Program[] = [
     title: '가장 빠르게 20억을 벌 수 있는 투자법: 스톡옵션',
     description: '',
     speaker: {
-      name: 'Quotabook',
+      name: '쿼타랩',
     },
   },
   {
