@@ -127,7 +127,8 @@ const programs: Program[] = [
     type: ProgramType.Sponsor,
     order: 4,
     title: '디지털 트랜스포메이션(DX)을 위한 엘리스의 WebRTC 기술 적용 이야기',
-    description: '',
+    description:
+      '엘리스 스페이스(WebRTC기반 실시간 커뮤니케이션서비스)를 직접 개발하면서 겪었던 경험을 공유하는 시간을 마련했습니다. 뿐만 아니라, 우리 조직이 디지털 트랜스포메이션(DX)의 중심에서 엘리스가 어떠한 일들을 하고 있고 어떠한 조직의 문화가 있는지 소개하는 시간을 공유합니다.',
     speaker: {
       name: '엘리스',
     },
