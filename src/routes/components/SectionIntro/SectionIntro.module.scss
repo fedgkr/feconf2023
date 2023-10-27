@@ -8,6 +8,7 @@
     font-size: 14px;
     letter-spacing: 3px;
     color: #FAFAFA;
+    text-transform: uppercase;
   }
 
   @include respond-to('medium') {
@@ -26,7 +27,7 @@
   br {
     display: none;
   }
-  
+
   @include respond-to('medium') {
     br {
       display: block;

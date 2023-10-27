@@ -1,0 +1,11 @@
+@import 'styles/mixin';
+
+.root {
+  position: relative;
+  width: 720px;
+  margin: 0 auto;
+  padding-bottom: 160px;
+
+  @include respond-to('medium') {
+  }
+}

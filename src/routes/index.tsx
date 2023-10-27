@@ -7,6 +7,7 @@ import {
   ProgramSection,
   SponsorSection,
   TicketInfoSection,
+  IndividualSponsorSection,
   Footer,
 } from './components';
 import { useVisible } from '~/hooks';
@@ -24,6 +25,7 @@ export default component$(() => {
       <ProgramHeader />
       <ProgramSection />
       <SponsorSection />
+      <IndividualSponsorSection />
       <TicketInfoSection />
       <OpensourceSection />
       <CoCSection />

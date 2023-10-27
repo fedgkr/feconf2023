@@ -6,5 +6,6 @@ export { default as SectionDivider } from './SectionDivider';
 export { default as SponsorSection } from './SponsorSection';
 export { default as TicketInfoSection } from './TicketInfoSection';
 export { default as OpensourceSection } from './OpensourceSection';
+export { default as IndividualSponsorSection } from './IndividualSponsorSection';
 export { default as CoCSection } from './CoCSection';
 export { default as Footer } from './Footer';
