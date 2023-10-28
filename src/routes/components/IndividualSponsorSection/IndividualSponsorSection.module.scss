@@ -7,5 +7,28 @@
   padding-bottom: 160px;
 
   @include respond-to('medium') {
+    width: 100%;
+    padding: 0 12px 100px 12px;
   }
+}
+
+.sponsorList {
+  margin-top: 64px;
+  padding: 0 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @include respond-to('medium') {
+    padding: 0;
+  }
+}
+
+.sponsor {
+  margin-right: 20px;
+  padding: 14px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
 }
