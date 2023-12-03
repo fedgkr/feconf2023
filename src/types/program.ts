@@ -13,6 +13,10 @@ interface Program {
     name: string;
     company?: string;
   };
+  attachments?: {
+    fileUrl: string;
+    videoUrl: string;
+  };
   extraAction?: {
     link: string;
     label: string;

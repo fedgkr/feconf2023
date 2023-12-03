@@ -12,6 +12,11 @@ const programs: Program[] = [
       name: '신의하',
       company: '포트원',
     },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=zYmSD9TZ-dM',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1xP4TWfCgGnRDLQBapbwM-ZCCPr9xW1-3?usp=drive_link',
+    },
   },
   {
     type: ProgramType.B,
@@ -23,6 +28,11 @@ const programs: Program[] = [
       name: '심흥운',
       company: 'Naver',
     },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=IaIFGYWDuuo',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1XqWOMA2xNqrM3tHucZ8OiEht6gYMRlIW?usp=drive_link',
+    },
   },
   {
     type: ProgramType.Sponsor,
@@ -31,6 +41,11 @@ const programs: Program[] = [
     description: '',
     speaker: {
       name: '토스',
+    },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=IaIFGYWDuuo',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1XqWOMA2xNqrM3tHucZ8OiEht6gYMRlIW?usp=drive_link',
     },
   },
   {
@@ -43,6 +58,11 @@ const programs: Program[] = [
       name: '문태근',
       company: '데브시스터즈',
     },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=Hd1JeePasuw',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1oI2HxpCUuDN3xp5t-AtYrziYMS9FPLEg?usp=drive_link',
+    },
   },
   {
     type: ProgramType.B,
@@ -53,6 +73,11 @@ const programs: Program[] = [
     speaker: {
       name: '박지혜',
       company: '토스플레이스',
+    },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=P3C7fzMqIYg',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1N1PuaUCUneY4F1VFol6CiVVk6EOq5Hp-?usp=drive_link',
     },
   },
   {
@@ -77,6 +102,11 @@ const programs: Program[] = [
       name: '이찬희',
       company: 'AB180',
     },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=V2E4ft7vqao',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1wVRGId2798louwMPDRnutbmSYOry-dZ_?usp=drive_link',
+    },
   },
   {
     type: ProgramType.B,
@@ -88,6 +118,11 @@ const programs: Program[] = [
     speaker: {
       name: '정지만',
       company: '숨고',
+    },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=OuqUkTFz7dc',
+      fileUrl:
+        'https://drive.google.com/drive/folders/11xIFt-dy1ZANih8FdHYIX33-A1YVzuy-?usp=drive_link',
     },
   },
   {
@@ -109,6 +144,11 @@ const programs: Program[] = [
       name: '원지혁',
       company: '당근',
     },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=pEPOGDPDU-U',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1S6F_n5lDzc4diDXiAnNIwlgaz9eHJtQb?usp=drive_link',
+    },
   },
   {
     type: ProgramType.B,
@@ -121,6 +161,11 @@ const programs: Program[] = [
     speaker: {
       name: '박서진',
       company: '토스',
+    },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=QfU5REp8sjQ',
+      fileUrl:
+        'https://drive.google.com/drive/folders/14I83wSzRx4L1OhnWf9oQ9dA1z1vwUZl1?usp=drive_link',
     },
   },
   {
@@ -145,6 +190,11 @@ const programs: Program[] = [
       name: '김종혁',
       company: 'flex',
     },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=VnJLFwnuLV4',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1FGs6YKEorcJIvoxVJ3YwIqWgU7t-83lj?usp=drive_link',
+    },
   },
   {
     type: ProgramType.B,
@@ -155,6 +205,11 @@ const programs: Program[] = [
     speaker: {
       name: '하태영',
       company: '당근',
+    },
+    attachments: {
+      videoUrl: 'https://www.youtube.com/watch?v=obQvttzgSzY',
+      fileUrl:
+        'https://drive.google.com/drive/folders/1zKmTATT_vbXsd8ldBSLQG2wpCR7f2BO6?usp=drive_link',
     },
   },
   {
