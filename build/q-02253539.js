@@ -1,0 +1,1 @@
+let t;(function(i){i[i.A=0]="A",i[i.B=1]="B",i[i.Sponsor=2]="Sponsor"})(t||(t={}));let l;(function(i){i[i.Diamond=0]="Diamond",i[i.Platinum=1]="Platinum",i[i.Gold=2]="Gold",i[i.Rookie=3]="Rookie"})(l||(l={}));export{t as P,l as S};
