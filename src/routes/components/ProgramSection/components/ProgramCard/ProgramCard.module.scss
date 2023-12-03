@@ -99,6 +99,34 @@
   }
 }
 
+.attachments {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.attachmentLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 0 12px 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.06);
+  height: 32px;
+
+  span {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 6px;
+  }
+
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
 .extraLink {
   display: flex;
   align-items: center;

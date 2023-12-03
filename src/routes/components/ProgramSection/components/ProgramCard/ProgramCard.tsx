@@ -58,6 +58,35 @@ const ProgramCard = component$<Props>(({ program }) => {
             dangerouslySetInnerHTML={program.description}
           />
         )}
+        {program.attachments && (
+          <div class={css.attachments}>
+            <SafeLink
+              class={css.attachmentLink}
+              href={program.attachments.videoUrl}
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path
+                  d="M5.99984 0.166504C2.77984 0.166504 0.166504 2.77984 0.166504 5.99984C0.166504 9.21984 2.77984 11.8332 5.99984 11.8332C9.21984 11.8332 11.8332 9.21984 11.8332 5.99984C11.8332 2.77984 9.21984 0.166504 5.99984 0.166504ZM4.83317 8.0415V3.95817C4.83317 3.719 5.10734 3.579 5.29984 3.72484L8.024 5.7665C8.1815 5.88317 8.1815 6.1165 8.024 6.23317L5.29984 8.27484C5.10734 8.42067 4.83317 8.28067 4.83317 8.0415Z"
+                  fill="white"
+                />
+              </svg>
+
+              <span>발표 영상</span>
+            </SafeLink>
+            <SafeLink
+              class={css.attachmentLink}
+              href={program.attachments.fileUrl}
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path
+                  d="M4.83333 4.27333V7.72667C4.83333 7.97167 5.11333 8.10583 5.30583 7.95417L7.46417 6.2275C7.61 6.11083 7.61 5.88917 7.46417 5.7725L5.30583 4.04583C5.11333 3.89417 4.83333 4.02833 4.83333 4.27333ZM10.0833 0.75H1.91667C1.275 0.75 0.75 1.275 0.75 1.91667V10.0833C0.75 10.725 1.275 11.25 1.91667 11.25H10.0833C10.725 11.25 11.25 10.725 11.25 10.0833V1.91667C11.25 1.275 10.725 0.75 10.0833 0.75ZM9.5 10.0833H2.5C2.17917 10.0833 1.91667 9.82083 1.91667 9.5V2.5C1.91667 2.17917 2.17917 1.91667 2.5 1.91667H9.5C9.82083 1.91667 10.0833 2.17917 10.0833 2.5V9.5C10.0833 9.82083 9.82083 10.0833 9.5 10.0833Z"
+                  fill="white"
+                />
+              </svg>
+              <span>발표 자료</span>
+            </SafeLink>
+          </div>
+        )}
         {program.extraAction && (
           <SafeLink class={css.extraLink} href={program.extraAction.link}>
             {program.extraAction.label}
